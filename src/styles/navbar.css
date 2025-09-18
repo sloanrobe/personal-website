@@ -1,0 +1,77 @@
+.navbar {
+  position: relative;     /* <— always at top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;        /* set a real height */
+  display: flex;
+  align-items: center;
+  /* background-color: fuchsia; */
+  padding: 5px 20px;
+  font-family: 'Lato';
+  /* padding: 10px 20px; */
+}
+
+.signature {
+  height: 140px;
+  width: auto;
+  background-color: black;
+}
+
+.navbar h1 {
+    /* margin-left: 15px; */
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+/* .nav-links {
+    list-style-type: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-25%);
+    display: flex;
+    gap: 50px;
+    width: 600px;
+    color: white;
+    padding-left: 10px;
+    background-color: green;
+
+} */
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin-left: 100px;
+  /* margin: 0 auto; centers links between h1 and logos */
+  padding: 0;
+  color: white;
+  /* background-color: green; */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-links li {
+  white-space: nowrap; /* prevents breaking onto a new line */
+}
+
+.contact-logos {
+  display: flex;
+  gap: 15px;
+  margin-left: auto; /* pushes logos to far right */
+}
+
+.linkedin-logo,
+.email-logo {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}

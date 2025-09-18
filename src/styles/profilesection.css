@@ -1,0 +1,59 @@
+.profile-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 400px;
+    /* padding-top: 100px; */
+    padding: 150px 80px 0 80px;
+    /* background-color: blueviolet; */
+    gap: 40px;
+}
+
+/* .profile-photo {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    background-color: yellow;
+    padding: 10px;
+}
+
+.profile-photo img {
+    width: 250px;
+    height: 400px;
+    object-fit: contain;
+} */
+
+.profile-photo {
+  position: relative;      /* required for img bottom:0 to be inside this box */
+  /* background: yellow; */
+  width: 450px;            /* give it width so it doesn’t collapse */
+  height: 100%;            /* match container height */
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  position: absolute;
+  bottom: 0;     /* sit on the bottom */
+  left: 0;       /* stick to left; change to 50% + translateX(-50%) to center */
+  height: 130%;  /* fill the box height proportionally */
+  width: auto;   /* keep aspect ratio */
+  object-fit: contain; /* harmless here */
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    margin-bottom: 80px;
+    margin-left: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+    line-height: 0.2;
+    /* background-color: red; */
+    font-family: 'Lato';
+}

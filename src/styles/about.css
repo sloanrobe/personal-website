@@ -1,0 +1,43 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+    position: relative;
+    gap: 0;
+}
+
+.about-container img {
+  max-width: 600px;
+  display: block;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-section {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 95%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(20px);
+    z-index: 1;   
+}
+
+.about-section p {
+    color: black;
+}
+
+.about-section h2,
+.about-section p {
+    margin: 0 0 12px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}

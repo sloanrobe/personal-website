@@ -1,0 +1,68 @@
+.logo-bar {
+  background-color: white;
+  display: flex;
+  /*   Pick ONE of these:
+  justify-content: space-between;  and set gap: 0; */
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px; /* if using space-between, don't also use gap */
+  padding: 10px;
+  height: 60px;
+  /* padding-left: 50px; */
+}
+
+.logo-bar img {
+  flex: 1 1 0%; /* equal-width slots */
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  /* filter: grayscale(100%); */
+}
+
+.logo-bar img:hover {
+    filter: grayscale(0%);
+}
+
+.logo-bar img.richmond {
+  transform: scale(1.5);
+}
+
+.logo-bar img.murray {
+  transform: scale(1.2);
+}
+
+.logo-bar img.titans {
+  transform: scale(0.8);
+}
+
+.logo-bar img.jets {
+  transform: scale(0.8) translateX(6px);
+}
+
+.logo-bar img.flo {
+  transform: scale(0.7) /* translateX(10px) */;
+}
+
+.logo-bar img.bca {
+  transform: scale(0.6) translateX(-30px);
+}
+
+.logo-bar img.optima {
+  transform: scale(0.6) translateX(-120px);
+}
+
+.logo-bar img.bizid {
+  transform: scale(1.6) translateX(-25px);
+}
+
+/* nudge instead of padding so layout isn’t affected */
+.logo-bar img.redskins {
+  transform: translateY(3px);
+}
+
+.logo-bar img:not(.bizid) {
+  position: relative;
+  left: 40px; /* or whatever looks good */
+}

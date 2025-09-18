@@ -1,0 +1,18 @@
+.experience-types {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.sports-technology,
+.sports-medicine,
+.full-stack {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.experience-types h2,
+.experience-types p {
+  color: #000;
+}
