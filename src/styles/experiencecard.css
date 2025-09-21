@@ -1,18 +1,110 @@
 .experience-types {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-top: 50px;
 }
 
-.sports-technology,
-.sports-medicine,
-.full-stack {
-    background-color: white;
-    border-radius: 8px;
+.experience-types h2 {
+  text-align: center;
 }
 
 .experience-types h2,
 .experience-types p {
   color: #000;
+}
+
+.sports-technology,
+.sports-medicine,
+.biz-dev {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.tech-logos div {
+  display: flex;          /* make each row a horizontal flex container */
+  justify-content: center;/* center logos in each row */
+  gap: 20px;              /* spacing between logos in the row */
+  background-color: red;
+}
+
+.tech-logos {
+  display: flex;          /* arrange tech-column divs side by side */
+  flex-direction: row;    /* default, but set explicitly for clarity */
+  justify-content: center;/* center columns horizontally */
+  align-items: flex-start;/* don't stretch columns vertically */
+  gap: 32px;              /* space between the two columns */
+  margin-top: 12px;
+  background-color: green;
+}
+
+.tech-column {
+  display: flex;
+  flex-direction: column; /* stack logos vertically */
+  gap: 16px;              /* spacing between logos in each column */
+}
+
+.tech-logos img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;    /* preserve aspect ratio */
+  filter: grayscale(100%);
+}
+
+.tech-logos img:hover {
+  filter: grayscale(0%);
+}
+
+.tech-logos img.tech-logo-bizid {
+  height: 100px;
+  transform: translateY(-30px);
+}
+
+.medicine-logos {
+  display: flex;
+  flex-direction: column; /* stack the two inner divs vertically */
+  align-items: center;    /* center rows horizontally */
+  gap: 16px;              /* space between the top and bottom rows */
+  margin-top: 12px;
+}
+
+.medicine-logos div {
+  display: flex;          /* make each row a horizontal flex container */
+  justify-content: center;/* center logos in each row */
+  gap: 20px;              /* spacing between logos in the row */
+}
+
+.medicine-logos img {
+  height: 50px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+}
+
+.medicine-logos img.medicine-logo-redskins {
+  height: 60px;
+  width: auto;
+}
+
+.medicine-logos img.medicine-logo-titans {
+  height: 45px;
+  width: auto;
+  transform: translateX(-5px) translateY(2px);
+}
+
+.medicine-logos img.medicine-logo-richmond {
+  height: 70px;
+  width: auto;
+  transform: translateY(-10px);
+}
+
+.medicine-logos img.medicine-logo-murray {
+  height: 55px;
+  transform: translateY(-4px);
+}
+
+.medicine-logos img:hover {
+  filter: grayscale(0%);
 }
