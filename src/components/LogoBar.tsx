@@ -13,7 +13,7 @@ function LogoBar() {
       <img className='flo' src="public/logos/FLOUnleashedlogo3.png" alt="FLO Unleashed logo" />
       <img className='bca' src="public/logos/BCAlogo.png" alt="Blu Chip Analytics logo" />
       <img className='optima' src="public/logos/OptimaSportsAnalyticslogo.png" alt="Optima Sports Analytics logo" />
-      <img className='bizid' src="public/logos/Bizidlogo2.png" alt="Bizid logo" />
+      <img className='bizid' src="public/logos/Bizidlogo4.png" alt="Bizid logo" />
     </div>
   )
 }
