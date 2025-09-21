@@ -4,8 +4,10 @@
     align-items: center;
     margin: 20px;
     margin-top: 50px;
+    margin-left: 5px;
     position: relative;
     gap: 0;
+    perspective: 1000px;
 }
 
 .about-container img {
@@ -17,8 +19,6 @@
 
 .about-section {
     flex: 1;
-    background: white;
-    border-radius: 8px;
     padding: 20px;
     max-height: 95%;
     min-height: 0;
@@ -26,7 +26,34 @@
     flex-direction: column;
     justify-content: center;
     transform: translateX(20px);
-    z-index: 1;   
+    z-index: 1;
+    font-family: 'Lato';
+    font-size: 1rem;
+    background: white;
+    color: #eaeaea;
+    border-radius: 10px;
+    border: 1px solid rgba(0,255,255,0.3);
+    box-shadow:
+      0 0 20px rgba(18,119,176,0.6),  /* soft core glow */
+      0 0 40px rgba(18,119,176,0.5),  /* outer glow */
+      0 0 80px rgba(18,119,176,0.4),  /* extended halo */
+      0 10px 25px rgba(0,0,0,0.8);    /* deep drop shadow for 3D */
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+/* .about-section:hover {
+  transform: translateX(20px) translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 15px rgba(18,119,176,0.8),
+    0 0 35px rgba(18,119,176,0.7),
+    0 0 60px rgba(18,119,176,0.5),
+    0 15px 30px rgba(0,0,0,0.9);
+} */
+
+
+.about-section h2 {
+  font-size: 2rem;
+  color: black;
 }
 
 .about-section p {
@@ -40,4 +67,18 @@
 
 .about-section p:last-child {
   margin-bottom: 0;
+}
+
+.divider {
+  border-top: 2px solid black; /* line thickness and color */
+  margin: 2rem 0;            /* space above and below */
+  width: 80%;                /* adjust width as needed */
+  margin-left: auto;         /* center the line */
+  margin-right: auto;
+}
+
+.about-images {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
