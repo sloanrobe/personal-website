@@ -1,13 +1,15 @@
 import './styles/style.css'
 import './styles/navbar.css'
 import './styles/profilesection.css'
-import './styles/about.css'
 import './styles/logobar.css'
+import './styles/about.css'
+import './styles/connectbar.css'
 import './styles/experiencecard.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
-import About from './components/About'
 import LogoBar from './components/LogoBar'
+import About from './components/About'
+import ConnectBar from './components/ConnectBar'
 import ExperienceCard from './components/ExperienceCard'
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
         <div>
           <About />
         </div>
+
+      {/*   <div>
+          <ConnectBar />
+        </div> */}
 
         <div>
           <ExperienceCard />
