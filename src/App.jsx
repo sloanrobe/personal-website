@@ -5,12 +5,14 @@ import './styles/logobar.css'
 import './styles/about.css'
 import './styles/connectbar.css'
 import './styles/experiencecard.css'
+import './styles/sportstechnologyexperience.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
 import LogoBar from './components/LogoBar'
 import About from './components/About'
 import ConnectBar from './components/ConnectBar'
 import ExperienceCard from './components/ExperienceCard'
+import SportsTechnologyExperience from './components/SportsTechnologyExperience'
 
 function App() {
   return (
@@ -39,6 +41,10 @@ function App() {
 
         <div>
           <ExperienceCard />
+        </div>
+
+        <div>
+          <SportsTechnologyExperience />
         </div>
 
       </div>
