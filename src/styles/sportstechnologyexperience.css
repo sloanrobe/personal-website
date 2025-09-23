@@ -1,0 +1,69 @@
+.sports-tech-experience {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    margin: 20px;
+    padding-top: 10px;
+    border-radius: 8px;
+}
+
+/* .flo-experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flo-experience img {
+    height: 60px;
+    width: auto;
+}
+
+.flo-experience p {
+    color: black;
+    margin: 0;
+} */
+
+.analytics-experience {
+  display: flex;
+  justify-content: space-between; /* even outer spacing */
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.analytics-experience img {
+    height: 60px;
+    width: auto;
+}
+
+.analytics-experience img.tech-bizid {
+    width: auto;
+}
+
+.logo-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-card p {
+    color: black;
+    margin: 0;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.tech-flo,
+.tech-optima,
+.tech-bca,
+.tech-bizid {
+    margin-bottom: 15px;
+}
