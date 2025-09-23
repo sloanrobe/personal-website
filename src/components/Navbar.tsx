@@ -7,10 +7,11 @@ function Navbar() {
       <img className='signature' src="public/images/Signature.png" alt="" />
       <ul className="nav-links">
         <li>About</li>
-        <li>Sports Technology</li>
-        <li>Sports Medicine</li>
+        <li>Experience</li>
         <li>Full-Stack Developer</li>
+        <li>Testimonials</li>
         <li>Timeline</li>
+        <li>Contact</li>
       </ul>
       <div className='contact-logos'>
         <a href="https://www.linkedin.com/in/benji-sloan/">
