@@ -1,8 +1,21 @@
+.experience {
+  margin-top: 100px;
+}
+
+.experience-title {
+  color: white;
+  margin-left: 45px;
+  font-family: 'Lato';
+  font-size: 2rem;
+}
+
 .experience-types {
   display: flex;
   justify-content: space-between;
   margin: 20px;
   margin-top: 50px;
+  /* height: 580px; */
+  gap: 30px;
 }
 
 .experience-types h2 {
@@ -17,15 +30,104 @@
 .sports-technology,
 .sports-medicine,
 .biz-dev {
-    background-color: white;
-    border-radius: 8px;
+  background-color: white;
+  border-radius: 8px;
+  flex: 1 1 0; 
+  min-width: 0;
+  /* height: 100%; */
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sports-technology,
+.sports-medicine,
+.biz-dev {
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #1277b0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  isolation: isolate;
+}
+
+.sports-technology:hover,
+.sports-medicine:hover,
+.biz-dev:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px rgba(18,119,176,0.6),  /* soft core glow */
+    0 0 40px rgba(18,119,176,0.5),  /* outer glow */
+    0 0 80px rgba(18,119,176,0.4),  /* extended halo */
+    0 10px 25px rgba(0,0,0,0.8);      /* cyan ring */
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+/* .sports-technology img:not(.sports-tech-generic-logo),
+.sports-medicine img:not(.NATA-logo),
+.biz-dev img:not(.consulting-logo) {
+  filter: grayscale(100%);
+} */
+
+.sports-technology:hover img,
+.sports-medicine:hover img,
+.biz-dev:hover img {
+  filter: grayscale(0%);
+}
+
+/* .sports-technology .learn-more,
+.sports-medicine .learn-more,
+.biz-dev .learn-more {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.sports-technology:hover .learn-more,
+.sports-medicine:hover .learn-more,
+.biz-dev:hover .learn-more {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+
+.sports-medicine {
+  padding-top: 18px;
+}
+
+/* .sports-technology .learn-more,
+.sports-medicine .learn-more,
+.biz-dev .learn-more {
+  margin-top: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.sports-technology:hover .learn-more,
+.sports-medicine:hover .learn-more,
+.biz-dev:hover .learn-more {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+} */
+
+
+.sports-tech-generic-logo {
+  height: 70px;
+  width: auto;
+  display: block;        /* allows margin auto to work */
+  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
 }
 
 .tech-logos div {
   display: flex;          /* make each row a horizontal flex container */
   justify-content: center;/* center logos in each row */
   gap: 20px;              /* spacing between logos in the row */
-  background-color: red;
 }
 
 .tech-logos {
@@ -34,25 +136,30 @@
   justify-content: center;/* center columns horizontally */
   align-items: flex-start;/* don't stretch columns vertically */
   gap: 32px;              /* space between the two columns */
-  margin-top: 12px;
-  background-color: green;
+  margin-top: 20px;
 }
 
 .tech-column {
   display: flex;
   flex-direction: column; /* stack logos vertically */
-  gap: 16px;              /* spacing between logos in each column */
+}
+
+.tech-logos .tech-column {
+  gap: 30px;
 }
 
 .tech-logos img {
   height: 40px;
   width: auto;
   object-fit: contain;    /* preserve aspect ratio */
-  filter: grayscale(100%);
 }
 
-.tech-logos img:hover {
-  filter: grayscale(0%);
+.tech-logos img.tech-logo-flo {
+  transform: translateX(5px);
+}
+
+.tech-logos img.tech-logo-bca {
+  transform: translateX(-10px);
 }
 
 .tech-logos img.tech-logo-bizid {
@@ -65,7 +172,7 @@
   flex-direction: column; /* stack the two inner divs vertically */
   align-items: center;    /* center rows horizontally */
   gap: 16px;              /* space between the top and bottom rows */
-  margin-top: 12px;
+  margin-top: 0;
 }
 
 .medicine-logos div {
@@ -74,13 +181,23 @@
   gap: 20px;              /* spacing between logos in the row */
 }
 
+.medicine-logos-1 {
+  margin-top: 5px;
+}
+
+.NATA-logo {
+  height: 60px;
+  width: auto;
+  display: block;        /* allows margin auto to work */
+  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
+}
+
 .medicine-logos img {
   height: 50px;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: grayscale(100%);
 }
 
 .medicine-logos img.medicine-logo-redskins {
@@ -105,6 +222,54 @@
   transform: translateY(-4px);
 }
 
-.medicine-logos img:hover {
-  filter: grayscale(0%);
+.biz-dev-logos {
+  display: flex;
+  flex-direction: column; /* stack the two inner divs vertically */
+  align-items: center;    /* center rows horizontally */
+  gap: 20px;              /* space between the top and bottom rows */
+  margin-top: 10px;
+}
+
+.consulting-logo {
+  height: 68px;
+  width: auto;
+  display: block;        /* allows margin auto to work */
+  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
+}
+
+.biz-dev-logos div {
+  display: flex;          /* make each row a horizontal flex container */
+  justify-content: center;/* center logos in each row */
+  gap: 15px;              /* spacing between logos in the row */
+}
+
+.biz-dev-logos img {
+  height: 50px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.biz-dev-logos img.k12 {
+  height: 60px;
+  background-color: transparent;
+  transform: translateX(2px) translateY(-10px)
+}
+
+.biz-dev-logos img.lockeroom,
+.biz-dev-logos img.probility,
+.biz-dev-logos img.recruit {
+  border-radius: 10px;
+}
+
+.biz-dev-logos img.dailyhuman {
+  height: 30px;
+  width: auto;
+  transform: translateY(5px);
+}
+
+.biz-dev-logos img.sportective {
+  height: 40px;
+  border-radius: 10px;
 }
