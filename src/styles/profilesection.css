@@ -1,59 +1,58 @@
 .profile-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 400px;
-    /* padding-top: 100px; */
-    padding: 150px 80px 0 80px;
-    /* background-color: blueviolet; */
-    gap: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 400px;
+  padding: 150px 40px 0 40px;
+  gap: 10px;
+  /* width: 100%; */
+  max-width: 1400px;
+  margin: 0 auto;
+  /* box-sizing: border-box; */
 }
-
-/* .profile-photo {
-    display: flex;
-    justify-content: left;
-    align-items: flex-end;
-    background-color: yellow;
-    padding: 10px;
-}
-
-.profile-photo img {
-    width: 250px;
-    height: 400px;
-    object-fit: contain;
-} */
 
 .profile-photo {
-  position: relative;      /* required for img bottom:0 to be inside this box */
-  /* background: yellow; */
-  width: 450px;            /* give it width so it doesn’t collapse */
-  height: 100%;            /* match container height */
+  position: relative;
+  width: 350px;
+  height: 100%;
   flex-shrink: 0;
 }
 
 .profile-photo img {
   position: absolute;
-  bottom: 0;     /* sit on the bottom */
-  left: 0;       /* stick to left; change to 50% + translateX(-50%) to center */
-  height: 130%;  /* fill the box height proportionally */
-  width: auto;   /* keep aspect ratio */
-  object-fit: contain; /* harmless here */
+  bottom: 0;
+  left: 0;
+  height: 130%;
+  width: auto;
+  object-fit: contain;
 }
 
 .headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 10px; */
-    margin-bottom: 80px;
-    margin-left: 100px;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: left;
-    line-height: 0.2;
-    /* background-color: red; */
-    font-family: 'Lato';
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  max-width: 1000px;
+  margin-left: 80px;
+  margin-bottom: 80px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2;
+}
+
+
+.headline-line {
+  margin: 5px 0;   /* small vertical spacing */
+  line-height: 1.2;
+}
+
+.headline-sub {
+  margin-top: 120px;
+  font-size: 1em;
+  line-height: 1.4;
 }
