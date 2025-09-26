@@ -3,12 +3,11 @@ import React from 'react'
 function Navbar() {
   return (
     <nav className='navbar'>
-      {/* <h1>Benji Sloan, MA, ATC</h1> */}
       <img className='signature' src="public/images/Signature.png" alt="" />
       <ul className="nav-links">
         <li>About</li>
         <li>Experience</li>
-        <li>Full-Stack Developer</li>
+        {<li>Junior Web Developer</li>}
         <li>Testimonials</li>
         <li>Timeline</li>
         <li>Contact</li>
