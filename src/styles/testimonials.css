@@ -1,0 +1,51 @@
+.testimonials {
+    margin-top: 100px;
+}
+
+.testimonials h2 {
+    color: white;
+    margin-left: 45px;
+    font-family: 'Lato';
+    font-size: 2rem;
+}
+
+
+.testimonial-card {
+    background-color: white;
+    border: 2px solid #1277b0;
+    border-radius: 10px;
+}
+
+.testimonial-card p {
+    color: black;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.headshot-style {
+  width: 100px;       /* control size */
+  height: 100px;      /* make it square */
+  object-fit: cover;  /* crop without distortion */
+  border-radius: 50%; /* makes it circular */
+  border: 2px solid #ccc;
+}
+
+.headshot-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-probility {
+    display: flex;
+}
+
+.testimonial-img-probility {
+    height: 60px;
+}
