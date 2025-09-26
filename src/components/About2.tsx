@@ -3,7 +3,7 @@ function About2() {
     <div className='about-container2'>
       <div className='about-section2'>
         <h2>About Me</h2>
-        <p>One sentence about who I am.</p>
+        <p>One sentence about who I am.This is a test for commits.</p>
         <p>Second sentence about what I've done.</p>
         <p>Third sentence about what I am looking to do.</p>
         <p>One sentence about who I am.</p>
