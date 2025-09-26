@@ -1,0 +1,68 @@
+.sports-med-experience {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    margin: 20px auto;
+    padding-top: 10px;
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+.medicine-experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.medicine-experience img {
+    height: 60px;
+    width: auto;
+}
+
+.med1,
+.med2 {
+  display: flex;
+  justify-content: center; /* even outer spacing */
+  align-items: flex-start;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 10px;
+  gap: 80px;
+}
+
+.med1 {
+    padding-left: 20px;
+}
+
+.logo-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-card p {
+    color: black;
+    margin: 0;
+}
+
+.logo-card .med-titans {
+    transform: translateX(-10px);
+}
+
+/* .no-wrap {
+  white-space: nowrap;
+}
+
+.tech-flo,
+.tech-optima,
+.tech-bca,
+.tech-bizid {
+    margin-bottom: 15px;
+} */

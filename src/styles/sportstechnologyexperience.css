@@ -4,12 +4,14 @@
     background-color: white;
     padding: 20px;
     align-items: center;
-    margin: 20px;
+    margin: 20px auto;
     padding-top: 10px;
+    max-width: 1000px;
+    width: 100%;
     border-radius: 8px;
 }
 
-/* .flo-experience {
+.flo-experience {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,19 +26,68 @@
 .flo-experience p {
     color: black;
     margin: 0;
+}
+
+/* .commercial-video {
+  margin-top: 10px;
+    width: 300px;
+  height: auto;
+  border-radius: 8px;
 } */
+
+.video-wrapper {
+  position: relative;
+  width: 300px;      /* set your preferred width */
+  max-width: 100%;   /* responsive downscale */
+}
+
+.commercial-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+  /* optional polish: */
+  /* box-shadow: 0 6px 16px rgba(0,0,0,.15); */
+}
+
+/* Centered play overlay */
+.play-overlay {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.play-overlay:hover {
+  background: rgba(0,0,0,0.8);
+  transform: translate(-50%, -50%) scale(1.05);
+}
 
 .analytics-experience {
   display: flex;
-  justify-content: space-between; /* even outer spacing */
+  justify-content: center;
+  gap: 80px;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin-top: 40px;
 }
 
 .analytics-experience img {
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
