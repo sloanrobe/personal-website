@@ -9,13 +9,44 @@
   font-size: 2rem;
 }
 
+.experience-card {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #1277b0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.experience-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: #1277b0;
+  margin: 0 10px;
+}
+
 .experience-types {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 0;
   margin-top: 50px;
   /* height: 580px; */
   gap: 30px;
+}
+
+.experience-card h2 {
+  text-align: center;
+}
+
+.experience-card h2,
+.experience-card p {
+  color: #000;
 }
 
 .experience-types h2 {
@@ -45,103 +76,94 @@
 .sports-technology,
 .sports-medicine,
 .biz-dev {
-  background: #fff;
-  border-radius: 10px;
-  border: 2px solid #1277b0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  /* background: #fff; */
+  /* border-radius: 10px; */
+  /* border: 2px solid #1277b0; */
+  /* box-shadow: 0 10px 25px rgba(0,0,0,0.35); */
   transition: transform 250ms ease, box-shadow 250ms ease;
   isolation: isolate;
 }
 
-.sports-technology:hover,
-.sports-medicine:hover,
-.biz-dev:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 20px rgba(18,119,176,0.6),  /* soft core glow */
-    0 0 40px rgba(18,119,176,0.5),  /* outer glow */
-    0 0 80px rgba(18,119,176,0.4),  /* extended halo */
-    0 10px 25px rgba(0,0,0,0.8);      /* cyan ring */
-    transition: transform 250ms ease, box-shadow 250ms ease;
-}
-
-/* .sports-technology img:not(.sports-tech-generic-logo),
-.sports-medicine img:not(.NATA-logo),
-.biz-dev img:not(.consulting-logo) {
-  filter: grayscale(100%);
+/* .sports-technology h2,
+.sports-medicine h2,
+.biz-dev h2 {
+  color: #1277b0;
 } */
 
-.sports-technology:hover img,
-.sports-medicine:hover img,
-.biz-dev:hover img {
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.learn-more-wrapper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.sports-technology .card-body,
+.sports-medicine .card-body,
+.biz-dev .card-body {
+  /* filter: grayscale(100%); */
+  transition: filter 250ms ease;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sports-technology:hover .card-body,
+.sports-medicine:hover .card-body,
+.biz-dev:hover .card-body {
   filter: grayscale(0%);
 }
-
-/* .sports-technology .learn-more,
-.sports-medicine .learn-more,
-.biz-dev .learn-more {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-}
-
-.sports-technology:hover .learn-more,
-.sports-medicine:hover .learn-more,
-.biz-dev:hover .learn-more {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-} */
 
 .sports-medicine {
   padding-top: 18px;
 }
 
-/* .sports-technology .learn-more,
-.sports-medicine .learn-more,
-.biz-dev .learn-more {
-  margin-top: auto;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+.sports-medicine-bullets,
+.sports-tech-bullets,
+.biz-dev-bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal-width columns */
+  gap: 1rem; /* spacing between the two columns */
+  /* margin-top: 5px; */
+  font-size: 0.8rem;
 }
 
-.sports-technology:hover .learn-more,
-.sports-medicine:hover .learn-more,
-.biz-dev:hover .learn-more {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-} */
-
+.sports-medicine-bullets ul,
+.sports-tech-bullets ul,
+.biz-dev-bullets ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
 
 .sports-tech-generic-logo {
   height: 70px;
   width: auto;
-  display: block;        /* allows margin auto to work */
-  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .tech-logos div {
-  display: flex;          /* make each row a horizontal flex container */
-  justify-content: center;/* center logos in each row */
-  gap: 20px;              /* spacing between logos in the row */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .tech-logos {
-  display: flex;          /* arrange tech-column divs side by side */
-  flex-direction: row;    /* default, but set explicitly for clarity */
-  justify-content: center;/* center columns horizontally */
-  align-items: flex-start;/* don't stretch columns vertically */
-  gap: 32px;              /* space between the two columns */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 30px;
 }
 
 .tech-column {
   display: flex;
-  flex-direction: column; /* stack logos vertically */
+  flex-direction: column;
 }
 
 .tech-logos .tech-column {
@@ -151,7 +173,7 @@
 .tech-logos img {
   height: 40px;
   width: auto;
-  object-fit: contain;    /* preserve aspect ratio */
+  object-fit: contain;
 }
 
 .tech-logos img.tech-logo-flo {
@@ -169,16 +191,16 @@
 
 .medicine-logos {
   display: flex;
-  flex-direction: column; /* stack the two inner divs vertically */
-  align-items: center;    /* center rows horizontally */
-  gap: 16px;              /* space between the top and bottom rows */
-  margin-top: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 15px;
 }
 
 .medicine-logos div {
-  display: flex;          /* make each row a horizontal flex container */
-  justify-content: center;/* center logos in each row */
-  gap: 20px;              /* spacing between logos in the row */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .medicine-logos-1 {
@@ -188,8 +210,8 @@
 .NATA-logo {
   height: 60px;
   width: auto;
-  display: block;        /* allows margin auto to work */
-  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .medicine-logos img {
@@ -224,23 +246,23 @@
 
 .biz-dev-logos {
   display: flex;
-  flex-direction: column; /* stack the two inner divs vertically */
-  align-items: center;    /* center rows horizontally */
-  gap: 20px;              /* space between the top and bottom rows */
-  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .consulting-logo {
   height: 68px;
   width: auto;
-  display: block;        /* allows margin auto to work */
-  margin: 0 auto 20px;   /* top 0, horizontal auto, bottom spacing */
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .biz-dev-logos div {
-  display: flex;          /* make each row a horizontal flex container */
-  justify-content: center;/* center logos in each row */
-  gap: 15px;              /* spacing between logos in the row */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .biz-dev-logos img {
@@ -249,6 +271,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.biz-dev-logos-bottom {
+  margin-top: 10px;
 }
 
 .biz-dev-logos img.k12 {
@@ -264,12 +290,42 @@
 }
 
 .biz-dev-logos img.dailyhuman {
-  height: 30px;
+  height: 33px;
   width: auto;
   transform: translateY(5px);
+  border-radius: 10px;
 }
 
 .biz-dev-logos img.sportective {
-  height: 40px;
+  height: 130px;
   border-radius: 10px;
+  transform: translateY(-43px);
+}
+
+/* Tweak how tall the divider is inside the card */
+.experience-card {
+  --divider-top: 20px;           /* space from top/bottom of the card */
+  --divider-bottom: 100px;
+}
+
+/* visible vertical divider with top/bottom insets */
+.vertical-divider {
+  align-self: stretch;                 /* take full available height */
+  width: 1px;
+  background-color: #1277b0;
+  margin: var(--divider-top) 10px var(--divider-bottom);   /* trims top/bottom instead of using height calc */
+  border-radius: 1px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* responsive: switch to horizontal divider on stacked layout */
+@media (max-width: 900px) {
+  .vertical-divider {
+    align-self: auto;
+    width: calc(100% - (var(--divider-inset) * 2));
+    height: 1px;
+    margin: 10px auto;
+  }
 }
