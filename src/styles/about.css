@@ -70,10 +70,10 @@
 }
 
 .divider {
-  border-top: 2px solid black; /* line thickness and color */
-  margin: 2rem 0;            /* space above and below */
-  width: 80%;                /* adjust width as needed */
-  margin-left: auto;         /* center the line */
+  border-top: 2px solid black;
+  margin: 2rem 0;
+  width: 80%;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -81,4 +81,9 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+}
+
+.about-question {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
