@@ -7,7 +7,8 @@ import './styles/connectbar.css'
 import './styles/experiencecard.css'
 import './styles/sportstechnologyexperience.css'
 import './styles/sportsmedicineexperience.css'
-import './styles/testimonials.css'
+/* import './styles/testimonials.css' */
+import './styles/testtestimonial.css'
 /* import './styles/timeline.css' */
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
@@ -18,7 +19,9 @@ import ExperienceCard from './components/ExperienceCard'
 import SportsTechnologyExperience from './components/SportsTechnologyExperience'
 import SportsMedicineExperience from './components/SportsMedicineExperience'
 import Testimonials from './components/Testimonials'
+/* import TestTestimonial from './components/TestTestimonial' */
 /* import Timeline from './components/Timeline' */
+import TestTestimonial from './components/TestTestimonial'
 
 function App() {
   return (
@@ -61,8 +64,12 @@ function App() {
           <SportsMedicineExperience />
         </div> */}
 
-        <div>
+        {/* <div>
           <Testimonials />
+        </div> */}
+
+        <div>
+          <TestTestimonial />
         </div>
 
       </div>
