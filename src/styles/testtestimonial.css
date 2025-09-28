@@ -1,0 +1,117 @@
+.testimonials {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials h2 {
+    color: white;
+    margin-left: 45px;
+    font-family: 'Lato';
+    font-size: 2rem;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px auto;
+}
+
+.testimonial-card {
+    background-color: rgb(16, 19, 21);
+    border: 1px solid #1277b0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    padding: 10px;
+}
+
+.testimonial-card p {
+    color: white;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+/* .testimonial-card > img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+} */
+
+.testimonial-card > img {
+  display: block;          /* predictable box */
+  max-height: 70px;
+  width: auto;             /* keep aspect */
+  max-width: 220px;        /* <-- keep it compact like in ExperienceCard rows */
+  object-fit: contain;
+
+  /* background-color: #fff; */  /* shows the rounded edge on dark card bg */
+  border-radius: 12px;
+  padding: 6px 12px;       /* optional: tile feel */
+  margin: 8px auto 0;      /* center the logo in the card */
+}
+
+.headshot-style {
+    width: 100px;       /* control size */
+    height: 100px;      /* make it square */
+    object-fit: cover;  /* crop without distortion */
+    border-radius: 50%; /* makes it circular */
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.headshot-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headshot-info p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.testimonial-probility {
+    display: flex;
+}
+
+.testimonial-img-dailyhuman {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.testimonial-img-lockeroom {
+    margin-top: 10px;
+    height: 70px;
+}
+
+.testimonial-img-probility {
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.testimonial-img-k12 {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.testimonial-img-sportective {
+    margin-top: 10px;
+    height: 50px;
+}
+
+/* .testimonial-img-dailyhuman,
+.testimonial-img-probility,
+.testimonial-img-lockeroom,
+.testimonial-img-k12,
+.testimonial-img-sportective {
+    border-radius: 10px;
+} */
