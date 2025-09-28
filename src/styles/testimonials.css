@@ -1,5 +1,7 @@
 .testimonials {
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials h2 {
@@ -9,15 +11,26 @@
     font-size: 2rem;
 }
 
+.testimonial-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
 .testimonial-card {
-    background-color: white;
-    border: 2px solid #1277b0;
+    background-color: rgb(16, 19, 21);
+    border: 1px solid #1277b0;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    padding: 10px;
 }
 
 .testimonial-card p {
-    color: black;
+    color: white;
+    line-height: 1.5rem;
 }
 
 .testimonial-row {
@@ -29,11 +42,12 @@
 }
 
 .headshot-style {
-  width: 100px;       /* control size */
-  height: 100px;      /* make it square */
-  object-fit: cover;  /* crop without distortion */
-  border-radius: 50%; /* makes it circular */
-  border: 2px solid #ccc;
+    width: 70px;       /* control size */
+    height: 70px;      /* make it square */
+    object-fit: cover;  /* crop without distortion */
+    border-radius: 50%; /* makes it circular */
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
 }
 
 .headshot-info {
@@ -42,10 +56,44 @@
     align-items: center;
 }
 
+.headshot-info p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
 .testimonial-probility {
     display: flex;
 }
 
+.testimonial-img-dailyhuman {
+    margin-top: 10px;
+    height: 30px;
+}
+
+.testimonial-img-lockeroom {
+    margin-top: 10px;
+    height: 50px;
+}
+
 .testimonial-img-probility {
-    height: 60px;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.testimonial-img-k12 {
+    margin-top: 10px;
+    height: 50px;
+}
+
+.testimonial-img-sportective {
+    margin-top: 10px;
+    height: 30px;
+}
+
+.testimonial-img-dailyhuman,
+.testimonial-img-probility,
+.testimonial-img-lockeroom,
+.testimonial-img-k12,
+.testimonial-img-sportective {
+    border-radius: 10px;
 }

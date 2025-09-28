@@ -280,7 +280,7 @@
 .biz-dev-logos img.k12 {
   height: 60px;
   background-color: transparent;
-  transform: translateX(2px) translateY(-10px)
+  transform: translateX(2px) translateY(-10px);
 }
 
 .biz-dev-logos img.lockeroom,
