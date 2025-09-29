@@ -8,7 +8,7 @@ import './styles/experiencecard.css'
 import './styles/sportstechnologyexperience.css'
 import './styles/sportsmedicineexperience.css'
 /* import './styles/testimonials.css' */
-import './styles/testtestimonial.css'
+import './styles/testtestimonial2.css'
 /* import './styles/timeline.css' */
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
