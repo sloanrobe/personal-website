@@ -11,16 +11,31 @@
     font-size: 2rem;
 }
 
-.testimonial-row {
+/* .testimonial-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     margin: 20px auto;
+} */
+
+.testimonial-row { /* TEST FOR SCROLLING */
+    display: flex;
+    flex-direction: row; /* Change to horizontal row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent cards from wrapping */
+    justify-content: flex-start; /* Align cards to the start */
+    gap: 30px;
+    margin: 20px auto;
+    padding-bottom: 20px; /* Add some padding for the dots */
 }
 
-.testimonial-card {
+.testimonial-row::-webkit-scrollbar { /* TEST FOR SCROLLING */
+    display: none;
+}
+
+/* .testimonial-card {
     background-color: rgb(16, 19, 21);
     border: 1px solid #1277b0;
     border-radius: 10px;
@@ -29,12 +44,35 @@
     gap: 10px;
     width: 70%;
     padding: 10px;
+} */
+
+.testimonial-card { /* TEST FOR SCROLLING */
+    background-color: rgb(16, 19, 21);
+    border: 1px solid #1277b0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;          /* Increase this percentage to make the card wider on smaller screens */
+    max-width: 1000px;    /* Increase this value to make the card wider on larger screens */
+    padding: 10px;
+    height: 475px; 
 }
 
-.testimonial-card p {
+/* .testimonial-card p {
     color: white;
     line-height: 2rem;
     font-size: 1.3rem;
+} */
+
+.testimonial-card p { /* TEST FOR SCROLLING */
+    color: white;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 /* .testimonial-card > img {
@@ -45,17 +83,27 @@
     border-radius: 10px;
 } */
 
-.testimonial-card > img {
-  display: block;          /* predictable box */
+/* .testimonial-card > img {
+  display: block;
   max-height: 70px;
-  width: auto;             /* keep aspect */
-  max-width: 220px;        /* <-- keep it compact like in ExperienceCard rows */
+  width: auto;
+  max-width: 220px;
   object-fit: contain;
-
-  /* background-color: #fff; */  /* shows the rounded edge on dark card bg */
   border-radius: 12px;
-  padding: 6px 12px;       /* optional: tile feel */
-  margin: 8px auto 0;      /* center the logo in the card */
+  padding: 6px 12px;
+  margin: 8px auto 0;
+} */
+
+.testimonial-card > img {
+    display: block;
+    max-height: 70px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+    padding: 6px 12px;
+    margin: 8px auto 0;
+    flex-shrink: 0;
 }
 
 .headshot-style {
@@ -67,15 +115,25 @@
     margin-bottom: 10px;
 }
 
-.headshot-info {
+/* .headshot-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
+} */
+
+.headshot-info { /* TEST FOR SCROLLING */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .headshot-info p {
     font-size: 0.8rem;
     margin: 0;
+    line-height: 1rem;
 }
 
 .testimonial-probility {
@@ -115,3 +173,26 @@
 .testimonial-img-sportective {
     border-radius: 10px;
 } */
+
+
+/* NEW CODE FOR DOTS */
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #1277b0;
+}
