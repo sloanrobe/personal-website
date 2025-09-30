@@ -3,25 +3,20 @@ import './styles/navbar.css'
 import './styles/profilesection.css'
 import './styles/logobar.css'
 import './styles/about.css'
-import './styles/connectbar.css'
+/* import './styles/connectbar.css' */
 import './styles/experiencecard.css'
-import './styles/sportstechnologyexperience.css'
-import './styles/sportsmedicineexperience.css'
-/* import './styles/testimonials.css' */
-import './styles/testtestimonial2.css'
-/* import './styles/timeline.css' */
+/* import './styles/sportstechnologyexperience.css'
+import './styles/sportsmedicineexperience.css' */
+import './styles/testimonialsection.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
 import LogoBar from './components/LogoBar'
 import About from './components/About'
-import ConnectBar from './components/ConnectBar'
+/* import ConnectBar from './components/ConnectBar' */
 import ExperienceCard from './components/ExperienceCard'
-import SportsTechnologyExperience from './components/SportsTechnologyExperience'
-import SportsMedicineExperience from './components/SportsMedicineExperience'
-import Testimonials from './components/Testimonials'
-/* import TestTestimonial from './components/TestTestimonial' */
-/* import Timeline from './components/Timeline' */
-import TestTestimonial from './components/TestTestimonial'
+/* import SportsTechnologyExperience from './components/SportsTechnologyExperience'
+import SportsMedicineExperience from './components/SportsMedicineExperience' */
+import TestimonialSection from './components/TestimonialSection'
 
 function App() {
   return (
@@ -44,32 +39,12 @@ function App() {
           <About />
         </div>}
 
-      {/*   <div>
-          <ConnectBar />
-        </div> */}
-
         <div>
           <ExperienceCard />
         </div>
 
-        {/* <div>
-          <Timeline />
-        </div> */}
-
-        {/* <div>
-          <SportsTechnologyExperience />
-        </div>
-
         <div>
-          <SportsMedicineExperience />
-        </div> */}
-
-        {/* <div>
-          <Testimonials />
-        </div> */}
-
-        <div>
-          <TestTestimonial />
+          <TestimonialSection />
         </div>
 
       </div>
