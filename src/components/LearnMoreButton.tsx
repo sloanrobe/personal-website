@@ -6,9 +6,11 @@ type LearnMoreButtonProps = {
 
 function LearnMoreButton({ label }: LearnMoreButtonProps) {
   return (
-    <button className='learn-more' >
-      {label}
-    </button>
+    <a href="https://www.linkedin.com/in/benji-sloan/" target="_blank" rel="noopener noreferrer">
+      <button className='learn-more' >
+        {label}
+      </button>
+    </a>
   )
 }
 
