@@ -85,7 +85,7 @@ import '../styles/learnmorebutton.css'
 
 function ExperienceCard() {
   return (
-    <section className='experience'>
+    <section id='experience-nav-scroll' className='experience'>
       <h2 className='experience-title'>Experience</h2>
       <div className='experience-card'>
         <div className='experience-section sports-technology'>
@@ -151,7 +151,7 @@ function ExperienceCard() {
               </div>
             </div>
             <div className='learn-more-wrapper'>
-              <LearnMoreButton label="View My Career Journey" />
+              <LearnMoreButton label="View My Experience" />
             </div>
           </div>
         </div>
