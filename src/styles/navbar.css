@@ -1,77 +1,95 @@
-.navbar {
-  position: relative;     /* <— always at top */
+/* .navbar {
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 60px;        /* set a real height */
+  height: 60px;
   display: flex;
   align-items: center;
-  /* background-color: fuchsia; */
   padding: 5px 20px;
   font-family: 'Lato';
-  /* padding: 10px 20px; */
+} */
+
+.navbar {
+  position: fixed;     /* fixes it to the screen */
+  top: 0;              /* stick to top */
+  left: 0;
+  right: 0;
+  z-index: 1000;       /* make sure it stays above content */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  font-family: 'Lato';
+  background-color: black; /* add a background so it doesn't look transparent */
 }
 
 .signature {
   height: 140px;
   width: auto;
-  background-color: black;
+  background: none;
+  background-color: transparent;
 }
 
 .navbar h1 {
-    /* margin-left: 15px; */
     margin: 0;
     color: white;
     font-size: 2rem;
     white-space: nowrap;
 }
 
-/* .nav-links {
-    list-style-type: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-25%);
-    display: flex;
-    gap: 50px;
-    width: 600px;
-    color: white;
-    padding-left: 10px;
-    background-color: green;
-
-} */
-
 .nav-links {
   display: flex;
   gap: 50px;
   list-style: none;
-  margin-left: 100px;
-  /* margin: 0 auto; centers links between h1 and logos */
+  margin-left: 230px;
   padding: 0;
   color: white;
-  /* background-color: green; */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 .nav-links li {
-  white-space: nowrap; /* prevents breaking onto a new line */
+  white-space: nowrap;
 }
 
 .contact-logos {
   display: flex;
   gap: 15px;
-  margin-left: auto; /* pushes logos to far right */
+  margin-left: auto;
 }
 
-.linkedin-logo,
+#about-nav-scroll,
+#experience-nav-scroll,
+#webdev-nav-scroll,
+#testimonials-nav-scroll,
+#gallery-nav-scroll,
+#contact-nav-scroll {
+  scroll-margin-top: calc(var(--nav-h) + 20px); /* offsets scrolling so headings are visible */
+}
+
+/* .navbar.navbar--scrolled {
+  border-bottom: 0.5px solid white;
+  
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+} */
+
+/* .linkedin-logo,
 .email-logo {
     width: 30px;
     height: auto;
     cursor: pointer;
+} */
+
+.navbar {
+  background-color: black;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.navbar.navbar--scrolled {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
