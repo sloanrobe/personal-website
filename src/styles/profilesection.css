@@ -5,12 +5,10 @@
   align-items: center;
   justify-content: flex-start;
   height: 400px;
-  padding: 150px 40px 0 40px;
+  padding: 130px 40px 0 40px;
   gap: 10px;
-  /* width: 100%; */
   max-width: 1400px;
   margin: 0 auto;
-  /* box-sizing: border-box; */
 }
 
 .profile-photo {
@@ -45,9 +43,8 @@
   line-height: 1.2;
 }
 
-
 .headline-line {
-  margin: 5px 0;   /* small vertical spacing */
+  margin: 5px 0;
   line-height: 1.2;
 }
 

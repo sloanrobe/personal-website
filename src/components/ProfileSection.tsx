@@ -10,7 +10,8 @@ function ProfileSection() {
         <p className='headline-line'>Visionary Leadership.</p>
         <p className='headline-line'>Strategic Insight.</p>
         <p className='headline-line'>Proven Results.</p>
-        {<p className='headline-sub'>Where Performance Meets Sports Tech Innovation.</p>}
+        {/* <p className='headline-sub'>Where Performance Meets Sports Tech Innovation.</p> */}
+        <p className='headline-sub'>Sports Tech Consulting for Innovation and Growth</p>
           {/* <p>Performance Visionary.</p>
           <p>Sports Tech Strategist.</p>
           <p>Collaborative Leader.</p> */}
