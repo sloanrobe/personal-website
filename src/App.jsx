@@ -5,18 +5,18 @@ import './styles/logobar.css'
 import './styles/about.css'
 /* import './styles/connectbar.css' */
 import './styles/experiencecard.css'
-/* import './styles/sportstechnologyexperience.css'
-import './styles/sportsmedicineexperience.css' */
+import './styles/webdev.css'
 import './styles/testimonialsection.css'
+import './styles/contactform.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
 import LogoBar from './components/LogoBar'
 import About from './components/About'
 /* import ConnectBar from './components/ConnectBar' */
 import ExperienceCard from './components/ExperienceCard'
-/* import SportsTechnologyExperience from './components/SportsTechnologyExperience'
-import SportsMedicineExperience from './components/SportsMedicineExperience' */
+import WebDev from './components/WebDev'
 import TestimonialSection from './components/TestimonialSection'
+import ContactForm from './components/ContactForm'
 
 function App() {
   return (
@@ -27,24 +27,34 @@ function App() {
           <Navbar />
         </div>
 
-        {<div>
+        <div>
           <ProfileSection />
-        </div>}
+        </div>
 
         <div>
           <LogoBar />
         </div>
 
-        {<div>
+        <div id="nav-border-sentinel" aria-hidden="true" style={{ height: 1 }} />
+
+        <div>
           <About />
-        </div>}
+        </div>
 
         <div>
           <ExperienceCard />
         </div>
 
         <div>
+          <WebDev />
+        </div>
+
+        <div>
           <TestimonialSection />
+        </div>
+
+        <div>
+          <ContactForm />
         </div>
 
       </div>
