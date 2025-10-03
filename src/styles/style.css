@@ -1,6 +1,16 @@
+:root {
+  --nav-h: 60px; /* your navbar height */
+}
+
 body {
   background-color: black;
   font-family: 'Lato';
+  padding-top: 60px;
+  padding-top: var(--nav-h);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .App p {
