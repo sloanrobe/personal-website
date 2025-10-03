@@ -1,0 +1,188 @@
+/* .webdev-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+    margin-left: 5px;
+    position: relative;
+    gap: 0;
+}
+
+.webdev-container img {
+    max-width: 600px;
+    display: block;
+    height: auto;
+    border-radius: 8px;
+}
+
+.webdev-logos img {
+    border: 1px solid #1277b0;
+    height: 550px;
+    width: auto;
+}
+
+.webdev-section {
+    flex: 1;
+    padding: 20px;
+    max-height: 95%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    font-family: 'Lato';
+    font-size: 1rem;
+    background: white;
+    color: #eaeaea;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow:
+      0 0 20px rgba(18,119,176,0.6), 
+      0 0 40px rgba(18,119,176,0.5), 
+      0 0 80px rgba(18,119,176,0.4), 
+      0 10px 25px rgba(0,0,0,0.8);
+    max-width: 700px;
+}
+
+.webdev-section h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.webdev-section p {
+    color: black;
+}
+
+.webdev-section h2,
+.webdev-section p {
+    margin: 0 0 12px;
+}
+
+.divider {
+    border-top: 2px solid black;
+    margin: 2rem 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.webdev-question {
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.webdev-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 150px;
+    margin-left: 5px;
+    position: relative;
+    gap: 0;
+}
+
+.webdev-container img {
+    max-width: 600px;
+    display: block;
+    height: auto;
+    border-radius: 8px;
+    /* Hide the image by default for animation */
+    opacity: 0;
+}
+
+/* ------------------------------------------- */
+/* ANIMATION STYLES */
+/* ------------------------------------------- */
+/* Image (Fades in first) */
+.fade-in-1 {
+    animation-name: fadeIn;
+    animation-duration: 2s; 
+    animation-delay: 0s; 
+    animation-fill-mode: forwards;
+}
+
+/* Text box (Fades in second) */
+.fade-in-2 {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards;
+}
+
+/* ------------------------------------------- */
+/* TEXT BOX STYLES */
+/* ------------------------------------------- */
+.webdev-section {
+    flex: 1;
+    padding: 20px;
+    max-height: 95%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-family: 'Lato';
+    font-size: 1rem;
+    background: white;
+    color: #eaeaea;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow:
+        0 0 20px rgba(18,119,176,0.6), 
+        0 0 40px rgba(18,119,176,0.5), 
+        0 0 80px rgba(18,119,176,0.4), 
+        0 10px 25px rgba(0,0,0,0.8);
+    max-width: 700px;
+    /* Hide the text box by default for animation */
+    opacity: 0;
+}
+
+.webdev-section h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.webdev-section p {
+    color: black;
+}
+
+.webdev-section h2,
+.webdev-section p {
+    margin: 0 0 12px;
+}
+
+.divider {
+    border-top: 2px solid black;
+    margin: 2rem 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.webdev-question {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ------------------------------------------- */
+/* IMAGE STYLES */
+/* ------------------------------------------- */
+.webdev-logos img {
+    border: 1px solid #1277b0;
+    height: 550px;
+    width: auto;
+}
