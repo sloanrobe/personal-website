@@ -3,19 +3,19 @@ import './styles/navbar.css'
 import './styles/profilesection.css'
 import './styles/logobar.css'
 import './styles/about.css'
-/* import './styles/connectbar.css' */
 import './styles/experiencecard.css'
 import './styles/webdev.css'
 import './styles/testimonialsection.css'
+import './styles/gallery.css'
 import './styles/contactform.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
 import LogoBar from './components/LogoBar'
 import About from './components/About'
-/* import ConnectBar from './components/ConnectBar' */
 import ExperienceCard from './components/ExperienceCard'
 import WebDev from './components/WebDev'
 import TestimonialSection from './components/TestimonialSection'
+import Gallery from './components/Gallery'
 import ContactForm from './components/ContactForm'
 
 function App() {
@@ -51,6 +51,10 @@ function App() {
 
         <div>
           <TestimonialSection />
+        </div>
+
+        <div>
+          <Gallery />
         </div>
 
         <div>
