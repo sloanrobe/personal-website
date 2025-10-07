@@ -1,5 +1,5 @@
-/* .navbar {
-  position: relative;
+.navbar {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -9,20 +9,7 @@
   align-items: center;
   padding: 5px 20px;
   font-family: 'Lato';
-} */
-
-.navbar {
-  position: fixed;     /* fixes it to the screen */
-  top: 0;              /* stick to top */
-  left: 0;
-  right: 0;
-  z-index: 1000;       /* make sure it stays above content */
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding: 5px 20px;
-  font-family: 'Lato';
-  background-color: black; /* add a background so it doesn't look transparent */
+  background-color: black;
 }
 
 .signature {
@@ -71,19 +58,6 @@
 #contact-nav-scroll {
   scroll-margin-top: calc(var(--nav-h) + 20px); /* offsets scrolling so headings are visible */
 }
-
-/* .navbar.navbar--scrolled {
-  border-bottom: 0.5px solid white;
-  
-  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
-} */
-
-/* .linkedin-logo,
-.email-logo {
-    width: 30px;
-    height: auto;
-    cursor: pointer;
-} */
 
 .navbar {
   background-color: black;

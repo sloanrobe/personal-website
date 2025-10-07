@@ -148,7 +148,6 @@ export default TestimonialSection; */
 
 import React, { useState } from 'react';
 
-// Your testimonialsData array is unchanged
 const testimonialsData = [
   {
     id: 1,
@@ -206,11 +205,10 @@ function TestimonialSection() {
 
     setIsFading(true);
 
-    // Update the content after the fade-out has reached its midpoint
     setTimeout(() => {
       setActiveIndex(index);
       setIsFading(false);
-    }, 150); // half of the 300ms CSS transition
+    }, 150);
   };
 
   const currentTestimonial = testimonialsData[activeIndex];
@@ -219,8 +217,8 @@ function TestimonialSection() {
     <div id='testimonials-nav-scroll' className='testimonials'>
       <h2>Testimonials</h2>
       <div className='testimonial-container'>
-        <div className='testimonial-card'> {/* This div (the box/border) stays */}
-          <div className={`testimonial-content ${isFading ? 'fading' : ''}`}> {/* This inner div fades */}
+        <div className='testimonial-card'>
+          <div className={`testimonial-content ${isFading ? 'fading' : ''}`}>
             <img className={currentTestimonial.logoClass} src={currentTestimonial.companyLogo} alt="" />
             <p>{currentTestimonial.text}</p>
             <div className='headshot-info'>

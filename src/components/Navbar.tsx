@@ -13,8 +13,7 @@ function Navbar() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // When sentinel is visible (we're at the very top), NO border.
-        // When it’s not visible (we've scrolled down past it), SHOW border.
+
         if (entry.isIntersecting) {
           navEl.classList.remove('navbar--scrolled')
         } else {
