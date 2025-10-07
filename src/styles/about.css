@@ -1,132 +1,83 @@
- /* Define the keyframes for the fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    margin-top: 50px;
-    margin-left: 5px;
-    position: relative;
-    gap: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 5px;
+  position: relative;
+  gap: 0;
 }
 
 .about-container img {
-    max-width: 500px;
-    display: block;
-    height: auto;
-    border-radius: 8px;
-    /* Hide all images by default so they can be animated in */
-    opacity: 0;
+  max-width: 500px;
+  display: block;
+  height: auto;
+  border-radius: 8px;
 }
 
-/* ------------------------------------------- */
-/* ANIMATION STYLES */
-/* ------------------------------------------- */
-/* Text box (Fades in first) */
-.fade-in-1 {
-    animation-name: fadeIn;
-    animation-duration: 2s; /* A good, smooth duration */
-    animation-delay: 0s; /* Starts immediately */
-    animation-fill-mode: forwards;
-}
-
-/* First image (Fades in second) */
-.fade-in-2 {
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    animation-delay: 0.5s; /* Starts 2 seconds after the first animation begins */
-    animation-fill-mode: forwards;
-}
-
-/* Second image (Fades in third) */
-.fade-in-3 {
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    animation-delay: 1s; /* Starts 4 seconds after the first animation begins */
-    animation-fill-mode: forwards;
-}
-
-/* ------------------------------------------- */
-/* TEXT BOX STYLES */
-/* ------------------------------------------- */
 .about-section {
-    flex: 1;
-    padding: 20px;
-    max-height: 95%;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-    font-family: 'Lato';
-    font-size: 1rem;
-    background: white;
-    color: #eaeaea;
-    border-radius: 10px;
-    border: 1px solid;
-    box-shadow:
-      0 0 20px rgba(18,119,176,0.6), 
-      0 0 40px rgba(18,119,176,0.5), 
-      0 0 80px rgba(18,119,176,0.4), 
-      0 10px 25px rgba(0,0,0,0.8);
-    /* Initial state for the animation */
-    opacity: 0;
-    max-width: 600px;
+  flex: 1;
+  padding: 20px;
+  max-height: 95%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  font-family: 'Lato';
+  font-size: 1rem;
+  background: white;
+  color: #eaeaea;
+  border-radius: 10px;
+  border: 1px solid;
+  box-shadow:
+    0 0 20px rgba(18,119,176,0.6),
+    0 0 40px rgba(18,119,176,0.5),
+    0 0 80px rgba(18,119,176,0.4),
+    0 10px 25px rgba(0,0,0,0.8);
+  max-width: 600px;
 }
 
 .about-section h2 {
-    font-size: 2rem;
-    color: black;
-    text-align: center;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
 }
 
 .about-section p {
-    color: black;
+  color: black;
 }
 
 .about-section h2,
 .about-section p {
-    margin: 0 0 12px;
+  margin: 0 0 12px;
 }
 
 .about-section p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .divider {
-    border-top: 2px solid black;
-    margin: 2rem 0;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  border-top: 2px solid black;
+  margin: 2rem 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ------------------------------------------- */
-/* IMAGE STYLES */
-/* ------------------------------------------- */
 .about-images-wrapper {
-    /* No animation on this container, just the children */
+  /* structure only */
 }
 
 .about-images {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
 
 .about-question {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
