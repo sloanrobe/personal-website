@@ -83,17 +83,17 @@
     margin-bottom: 5px;
 }
 
-.testimonial-content .headshot-info {
+.testimonial-content .testimonial-author {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
 }
 
-.headshot-info p {
+.testimonial-author p {
     font-size: 0.8rem;
     margin: 0;
-    line-height: 0.5rem;
+    line-height: 1rem;
 }
 
 .testimonial-dots {

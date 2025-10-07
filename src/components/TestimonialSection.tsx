@@ -221,7 +221,7 @@ function TestimonialSection() {
           <div className={`testimonial-content ${isFading ? 'fading' : ''}`}>
             <img className={currentTestimonial.logoClass} src={currentTestimonial.companyLogo} alt="" />
             <p>{currentTestimonial.text}</p>
-            <div className='headshot-info'>
+            <div className='testimonial-author'>
               <img className='headshot-style' src={currentTestimonial.headshot} alt="" />
               <p>{currentTestimonial.name}</p>
               <p>{currentTestimonial.title}</p>
