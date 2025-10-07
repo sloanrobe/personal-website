@@ -8,6 +8,7 @@ import './styles/webdev.css'
 import './styles/testimonialsection.css'
 import './styles/gallery.css'
 import './styles/contactform.css'
+import './styles/footer.css'
 import Navbar from './components/Navbar'
 import ProfileSection from './components/ProfileSection'
 import LogoBar from './components/LogoBar'
@@ -17,6 +18,7 @@ import WebDev from './components/WebDev'
 import TestimonialSection from './components/TestimonialSection'
 import Gallery from './components/Gallery'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -59,6 +61,10 @@ function App() {
 
         <div>
           <ContactForm />
+        </div>
+
+        <div>
+          <Footer />
         </div>
 
       </div>
