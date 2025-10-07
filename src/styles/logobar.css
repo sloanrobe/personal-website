@@ -1,14 +1,11 @@
 .logo-bar {
   background-color: white;
   display: flex;
-  /*   Pick ONE of these:
-  justify-content: space-between;  and set gap: 0; */
   justify-content: space-evenly;
   align-items: center;
-  gap: 10px; /* if using space-between, don't also use gap */
+  gap: 10px;
   padding: 10px;
   height: 60px;
-  /* padding-left: 50px; */
 }
 
 .logo-bar img {
@@ -57,12 +54,11 @@
   transform: scale(1.6) translateX(-25px);
 }
 
-/* nudge instead of padding so layout isn’t affected */
 .logo-bar img.redskins {
   transform: translateY(3px);
 }
 
 .logo-bar img:not(.bizid) {
   position: relative;
-  left: 40px; /* or whatever looks good */
+  left: 40px;
 }

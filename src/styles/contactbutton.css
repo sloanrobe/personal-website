@@ -7,13 +7,10 @@
   display: inline-block;
   font-family: 'Lato';
   font-size: 16px;
-  /* font-weight: 600; */
   outline: 0;
   padding: 8px 16px;
   position: relative;
   text-align: center;
-  /* align-self: center;
-  margin-top: auto; */
   margin-left: auto;
   text-decoration: none;
   transition: all .3s;
@@ -24,7 +21,6 @@
 
 .contact-button:before {
   background-color: initial;
-  /* background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%); */
   border-radius: 125px;
   content: "";
   height: 50%;

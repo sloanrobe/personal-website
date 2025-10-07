@@ -1,131 +1,8 @@
-/* .contact {
+.contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 25px;
-    margin-top: 80px
-}
-
-.contact-header h2 {
-    color: white;
-    margin-left: 20px;
-    font-family: 'Lato';
-    font-size: 2rem;
-}
-
-.contact-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    width: 100%;
-}
-
-.consultation-text {
-    color: white;
-    background-color: green;
-}
-
-.consultation-heading {
-    color: white;
-    font-size: 30px;
-    max-width: 500px;
-    text-align: center;
-}
-
-form {
-    max-width: 600px;
-    width: 100%;
-    background: rgb(16, 19, 21);
-    padding: 10px 20px 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    color: #333;
-    margin: 25px;
-    border: 2px solid #1277b0;
-    background-color: red;
-}
-
-form h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-form .input-box {
-    margin-top: 20px;
-}
-
-.input-box label {
-    font-family: 'Lato';
-    font-weight: bold;
-    color: white;
-}
-
-.input-box .field {
-    box-sizing: border-box;
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #ddd;
-    outline: none;
-    border-radius: 6px;
-    padding: 15px;
-    font-size: 16px;
-    color: #333;
-    margin-top: 8px;
-}
-
-.input-box .field.mess {
-    height: 147px;
-    resize: none;
-}
-
-.input-box .field::placeholder {
-  font-family: 'Lato';
-  color: #a9a9a9;
-}
-
-form button {
-    width: 200px;
-    height: 55px;
-    background: #1277b0;
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 25px;
-    transition: .5s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-form button:hover {
-    background: #1277b0;
-    scale: 1.05;
-}
-
-.form-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.form-content > div {
-    flex: 1;
-    min-width: 250px;
-} */
-
-.contact {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center;
-    align-items: flex-start; /* Align children to the left */
     padding: 25px;
     position: relative; 
     margin-top: 50px;
@@ -142,7 +19,6 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* Reduced gap to provide more horizontal room for the text */
     gap: 30px; 
     width: 100%;
 }
@@ -152,31 +28,24 @@ form button:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    
-    /* Pushes text to the top of contact-body */
     padding-top: 5px; 
-    
-    /* Increased max-width significantly to allow for single-line text */
     max-width: 650px; 
     color: white;
-    /* Allows the text area to expand and take available space */
     flex-grow: 1;
 }
 
 .consultation-heading {
     color: white;
-    font-size: 2.2rem; /* Kept large for impact */
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px; 
     flex-shrink: 0;
-    /* Removed max-width: 500px to allow text to fill the container */
     max-width: 400px;
 }
 
 .consultation-subtext {
     color: #ccc; 
-    /* Slightly reduced font size for long text to help it fit on one line */
     font-size: 1.5rem; 
     text-align: left;
     line-height: 1.5;
@@ -190,31 +59,21 @@ form button:hover {
     gap: 15px;
 }
 
-/* NEW: Custom Success Modal Styles (Removed for brevity in this final version) */
-/* This file is focused on layout/sizing */
-
-/* NEW: This element defines the fixed, circular frame and clips the image */
 .headshot-frame {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 2px solid #ccc;
-    /* margin-bottom: 10px; */
     margin-top: 35px;
-    overflow: hidden; /* CRUCIAL: Hides the zoomed portion outside the circle */
+    overflow: hidden;
 }
 
 .headshot-style-benji {
-    /* Set image to fill the 100x100 frame */
     width: 100%; 
     height: 100%;
-    
-    /* Image scaling properties */
     object-fit: cover;
     object-position: 50% 10%;
-    transform: scale(1.15); /* Only the image content is scaled */
-    
-    /* Removed properties that belong to the frame/border */
+    transform: scale(1.15);
 }
 
 .benji-chat-bubble {
@@ -311,23 +170,22 @@ form button:hover {
     min-width: 250px;
 }
 
-/* Media query for mobile responsiveness */
 @media (max-width: 800px) {
     .contact-body {
-        flex-direction: column; /* Stack vertically on small screens */
-        align-items: center; /* Center items when stacked */
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
     .consultation-text {
         padding-top: 0;
-        align-items: center; /* Center text for better mobile layout */
+        align-items: center;
         text-align: center;
         max-width: 90%;
     }
     
     .consultation-heading, .consultation-subtext {
-        text-align: center; /* Ensure text is centered on mobile */
+        text-align: center;
     }
 
     form {

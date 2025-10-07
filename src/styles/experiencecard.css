@@ -36,7 +36,6 @@
   justify-content: space-between;
   margin: 0;
   margin-top: 50px;
-  /* height: 580px; */
   gap: 30px;
 }
 
@@ -65,7 +64,6 @@
   border-radius: 8px;
   flex: 1 1 0; 
   min-width: 0;
-  /* height: 100%; */
   box-sizing: border-box;
   padding: 10px;
   display: flex;
@@ -76,10 +74,6 @@
 .sports-technology,
 .sports-medicine,
 .biz-dev {
-  /* background: #fff; */
-  /* border-radius: 10px; */
-  /* border: 2px solid #1277b0; */
-  /* box-shadow: 0 10px 25px rgba(0,0,0,0.35); */
   transition: transform 250ms ease, box-shadow 250ms ease;
   isolation: isolate;
 }
@@ -127,8 +121,7 @@
 .biz-dev-bullets {
   display: grid;
   grid-template-columns: 1fr 1fr; /* two equal-width columns */
-  gap: 1rem; /* spacing between the two columns */
-  /* margin-top: 5px; */
+  gap: 1rem;
   font-size: 0.8rem;
 }
 
@@ -302,18 +295,16 @@
   transform: translateY(-43px);
 }
 
-/* Tweak how tall the divider is inside the card */
 .experience-card {
-  --divider-top: 20px;           /* space from top/bottom of the card */
+  --divider-top: 20px;
   --divider-bottom: 100px;
 }
 
-/* visible vertical divider with top/bottom insets */
 .vertical-divider {
-  align-self: stretch;                 /* take full available height */
+  align-self: stretch;
   width: 1px;
   background-color: #1277b0;
-  margin: var(--divider-top) 10px var(--divider-bottom);   /* trims top/bottom instead of using height calc */
+  margin: var(--divider-top) 10px var(--divider-bottom);
   border-radius: 1px;
   position: relative;
   z-index: 1;

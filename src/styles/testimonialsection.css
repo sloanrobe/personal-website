@@ -34,10 +34,8 @@
     padding: 10px;
     height: 475px;
     margin-bottom: 20px;
-    /* transition and opacity are removed from here */
 }
 
-/* New class for the content that will fade */
 .testimonial-content {
     display: flex;
     flex-direction: column;
@@ -47,11 +45,11 @@
     width: 100%;
     height: 100%;
     transition: opacity 0.3s ease-in-out;
-    opacity: 1; /* Default state: content is fully visible */
+    opacity: 1;
 }
 
 .testimonial-content.fading {
-    opacity: 0.2; /* Content fades to 20% visibility */
+    opacity: 0.2;
 }
 
 .testimonial-content p {
