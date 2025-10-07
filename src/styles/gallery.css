@@ -35,6 +35,7 @@ h1 {
   height: auto;
   display: block;
   border-radius: 6px; /* optional: nicer corners */
+  border: 1px solid #1277b0;
 }
 
 .gallery .pics:hover {
