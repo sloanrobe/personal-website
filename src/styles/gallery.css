@@ -1,0 +1,163 @@
+h1 {
+  color: white;
+}
+
+.gallery {
+  /* keep the gallery from spanning the full screen */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+
+  /* target a card width instead of fixed percentages */
+  column-width: 240px; /* adjust 200–260px to taste */
+  column-gap: 12px;
+
+  /* vendor prefixes */
+  -webkit-column-width: 240px;
+  -moz-column-width: 240px;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+}
+
+.gallery .pics {
+  /* prevent items from breaking across columns */
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+
+  margin-bottom: 12px;
+  transition: all 350ms ease;
+  cursor: pointer;
+}
+
+.gallery .pics img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px; /* optional: nicer corners */
+}
+
+.gallery .pics:hover {
+  filter: opacity(0.85);
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    column-width: 200px;
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-width: 160px;
+    -webkit-column-width: 160px;
+    -moz-column-width: 160px;
+  }
+}
+
+/* ---------- Modal (overlay) ---------- */
+.model {
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  padding: 0 12px; /* small gutter on mobile */
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 4000;
+}
+
+.model.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.model img {
+  width: auto;
+  height: auto;
+  max-width: min(92vw, 1200px);
+  max-height: 92vh;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+  border-radius: 8px;
+  transform: scale(0.95);
+  transition: transform 0.5s ease-in-out;
+}
+
+.model.open img {
+  transform: scale(1);
+}
+
+/* Close icon (MUI) */
+/* .model .close-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 2rem;
+  height: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  background: rgba(0,0,0,0.45);
+  border-radius: 6px;
+  padding: 4px;
+
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+} */
+
+.model .close-btn {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;              /* MUI icons use currentColor */
+  background: rgba(0,0,0,0.45);
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 2;                  /* above the image inside .model */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.model .close-btn:hover,
+.model .close-btn:focus {
+  background: rgba(255,255,255,0.15);
+  outline: none;
+}
+
+.model .close-btn path {
+  fill: currentColor;
+}
+
+.model .close-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+.model.open ~ .gallery {
+  pointer-events: none;
+}
