@@ -242,6 +242,13 @@
 
 .webdev-question { font-size: 1.5rem; font-weight: bold; }
 
+.webdev-answer {
+  align-self: stretch;
+  width: 100%;
+  text-align: left;
+}
+
+
 .webdev-logos img {
   border: 1px solid #1277b0;
   height: 550px;
