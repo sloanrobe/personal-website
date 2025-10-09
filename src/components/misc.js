@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* import React, { useState, useEffect, useRef } from 'react';
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +38,7 @@ function About() {
 
   return (
     <div id='about-nav-scroll' className='about-container' ref={containerRef}>
-      {/* Text box fades in first */}
+      
       <div className={`about-section ${isVisible ? 'fade-in-1' : ''}`}>
         <h2>Hi, my name is Benji Sloan...</h2>
         <p>...and for 25 years, I've worked at the intersection of elite athletics and innovation - helping NFL stars, elite athletes, Olympians, and now sports technology companies perform at their best.</p>
@@ -50,12 +50,12 @@ function About() {
         <p>Sure, I've been in the sports industry longer than most Gatorade flavors have existed. I've seen both torn ACLs <i>and</i> torn business plans.</p>
         <p>I know the people who move it forward, and I don't hesitate to call out what's not working. I bring hard-earned insight, a killer network, and a straight-shooting approach to get results that stick - plus diverse perspectives, a no-quit work ethic, and consistent collaboration.</p>
       </div>
-      {/* Images container fades in second and third */}
+      
       <div className={`about-images-wrapper`}>
         <div className='about-images'>
-          {/* First image fades in second */}
+         
           <img src="public/images/NYJ.jpg" alt="Benji Sloan with New York Jets Staff" className={isVisible ? 'fade-in-2' : ''}/>
-          {/* Second image fades in third */}
+          
           <img src="public/images/Speaker_5.jpg" alt="Benji Sloan speaking at a conference" className={isVisible ? 'fade-in-3' : ''}/>
         </div>
       </div>
@@ -63,11 +63,11 @@ function About() {
   )
 }
 
-export default About;
+export default About; */
 
 
 
-import React, { useState } from 'react'
+/* import React, { useState } from 'react'
 
 import '../gallery.css'
 import CloseIcon from '@mui/icons-material/Close';
@@ -256,11 +256,11 @@ h1 {
         column-width: 100%;
         padding: 0 12px;
     }
-}
+} */
 
 /* model */
 
-.model {
+/* .model {
     width: 100%;
     height: 100%;
     position: 0;
@@ -306,4 +306,12 @@ h1 {
     background-color: rgba(0, 0, 0, 0.4);
     color: #ffffff;
     cursor: pointer;
-}
+} */
+
+/* CREATE TABLE contact_submissions (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT,
+    submission_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+); */
