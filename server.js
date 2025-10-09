@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import contactHandler from './backend/contact-handler.js'; 
+import contactHandler from './backend/contact-handler.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001; 
