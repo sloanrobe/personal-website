@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import Swal from 'sweetalert2'
 
 const ContactForm = () => {
@@ -71,27 +71,25 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default ContactForm */
 
-// 'use client'; // <- uncomment if using Next.js App Router
-
-/* import React from 'react'
+import React from 'react'
 import Swal from 'sweetalert2'
 
 const ContactForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
-    const payload = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message'),
-    };
+    const payload = Object.fromEntries(formData); // { name, email, message }
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+      const res = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
         body: JSON.stringify(payload),
       });
 
@@ -99,20 +97,23 @@ const ContactForm = () => {
 
       if (res.ok && data.success) {
         Swal.fire({
-          icon: "success",
-          title: "Success!",
-          html: "Your message has been received!<br>I will respond to you very soon.",
+          icon: 'success',
+          title: 'Success!',
+          html: 'Your message has been received!<br>I will respond to you very soon.',
         });
         event.target.reset();
       } else {
-        throw new Error(data.message || "Submission failed");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: data.message || 'Something went wrong submitting your message.',
+        });
       }
-    } catch (err) {
-      console.error(err);
+    } catch (e) {
       Swal.fire({
-        icon: "error",
-        title: "Oops!",
-        html: "Something went wrong submitting your message. Please try again.",
+        icon: 'error',
+        title: 'Network error',
+        text: 'Could not reach the server. Please try again.',
       });
     }
   };
@@ -125,9 +126,9 @@ const ContactForm = () => {
           <h3 className='consultation-subtext'>Let's define the next high-impact move.</h3>
           <div className='headshot-info'>
             <div className='headshot-frame'>
-              <img className='headshot-style-benji' src="/headshots/Benji-Sloan-headshot.jpg" alt="Benji Sloan" />
+              <img className='headshot-style-benji' src="public/headshots/Benji-Sloan-headshot.jpg" alt="" />
             </div>
-            <img className='benji-chat-bubble' src="/images/Benji-chat-bubble.png" alt="Chat bubble" />
+            <img className='benji-chat-bubble' src="public/images/Benji-chat-bubble.png" alt="" />
           </div>
         </div>
 
@@ -136,11 +137,23 @@ const ContactForm = () => {
             <div>
               <div className="input-box">
                 <label>Full Name</label>
-                <input type="text" className='field' placeholder='Enter your name' name='name' required />
+                <input
+                  type="text"
+                  className='field'
+                  placeholder='Enter your name'
+                  name='name'
+                  required
+                />
               </div>
               <div className="input-box">
                 <label>Email Address</label>
-                <input type="email" className='field' placeholder='Enter your email' name='email' required />
+                <input
+                  type="email"
+                  className='field'
+                  placeholder='Enter your email'
+                  name='email'
+                  required
+                />
               </div>
             </div>
             <div>
@@ -159,8 +172,7 @@ const ContactForm = () => {
         </form>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactForm;
- */
+export default ContactForm
