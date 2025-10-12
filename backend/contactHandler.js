@@ -8,7 +8,7 @@ const pool = new Pool({
   }
 });
 
-const WEB3FORMS_ACCESS_KEY = process.env.WEB3FORMS_KEY || "38c7b6fa-52a0-476c-889b-3c9560fcbe5b"; 
+const WEB3FORMS_ACCESS_KEY = process.env.WEB3FORMS_KEY; 
 
 /**
  * Express route handler for /api/contact submissions.
