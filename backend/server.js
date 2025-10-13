@@ -43,7 +43,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-import contactHandler from './backend/contactHandler.js';
+import contactHandler from './contactHandler.js';
 
 const app = express();
 
