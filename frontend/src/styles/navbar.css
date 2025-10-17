@@ -10,6 +10,8 @@
   padding: 5px 20px;
   font-family: 'Lato';
   background-color: black;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 
 .signature {
@@ -56,14 +58,9 @@
 #testimonials-nav-scroll,
 #gallery-nav-scroll,
 #contact-nav-scroll {
-  scroll-margin-top: calc(var(--nav-h) + 20px); /* offsets scrolling so headings are visible */
+  scroll-margin-top: calc(var(--nav-h) + 20px);
 }
 
-.navbar {
-  background-color: black;
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-}
 .navbar.navbar--scrolled {
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
