@@ -28,17 +28,10 @@
     margin: 0;
 }
 
-/* .commercial-video {
-  margin-top: 10px;
-    width: 300px;
-  height: auto;
-  border-radius: 8px;
-} */
-
 .video-wrapper {
   position: relative;
-  width: 300px;      /* set your preferred width */
-  max-width: 100%;   /* responsive downscale */
+  width: 300px;
+  max-width: 100%;
 }
 
 .commercial-video {
@@ -47,11 +40,8 @@
   display: block;
   margin-top: 10px;
   border-radius: 8px;
-  /* optional polish: */
-  /* box-shadow: 0 6px 16px rgba(0,0,0,.15); */
 }
 
-/* Centered play overlay */
 .play-overlay {
   position: absolute;
   inset: 50% auto auto 50%;

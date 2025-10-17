@@ -27,7 +27,7 @@
 .med1,
 .med2 {
   display: flex;
-  justify-content: center; /* even outer spacing */
+  justify-content: center;
   align-items: flex-start;
   max-width: 1000px;
   width: 100%;
@@ -55,14 +55,3 @@
 .logo-card .med-titans {
     transform: translateX(-10px);
 }
-
-/* .no-wrap {
-  white-space: nowrap;
-}
-
-.tech-flo,
-.tech-optima,
-.tech-bca,
-.tech-bizid {
-    margin-bottom: 15px;
-} */
