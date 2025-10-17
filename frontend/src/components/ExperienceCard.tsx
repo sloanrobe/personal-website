@@ -24,7 +24,7 @@ function ExperienceCard() {
               <li>Team Culture & Chemistry</li>
               <li>Cognitive Assessments</li>
             </ul>
-          </div>
+            </div>
             <div className='tech-logos'>
               <div className='tech-column'>
                 <img className='tech-logo-flo' src="public/logos/FLOUnleashedlogo3.PNG" alt="" />  
@@ -51,7 +51,7 @@ function ExperienceCard() {
                 <li>6 Heisman Trophy Winners</li>
               </ul>
               <ul>
-                <li>4 NFL #1 Overall Draft Picks</li>
+                <li>4 NFL #1 <span className='hide-on-mobile'>Overall</span> Draft Picks</li>
                 <li>2 NFL MVPs</li>
                 <li>2 Olympic Athletes</li>
               </ul>
@@ -63,10 +63,10 @@ function ExperienceCard() {
                 <img className='medicine-logo-jets' src="public/logos/JetsLogo.png" alt="New York Jets logo" />
               </div>
               <div>
-                <img src="public/logos/Vanderbiltlogo2.png" alt="Vanderbilt logo" />
+                <img className='medicine-logo-vanderbilt' src="public/logos/Vanderbiltlogo2.png" alt="Vanderbilt logo" />
                 <img className='medicine-logo-richmond' src="public/logos/RichmondSpiderslogo2.png" alt="Richmond Spiders logo" />
                 <img className='medicine-logo-murray' src="public/logos/MurrayStateLogo2.png" alt="Murray State logo" />     
-                <img src="public/logos/PinesCharterlogo3.jpg" alt="Pines Charter logo" />
+                <img className='medicine-logo-pines' src="public/logos/PinesCharterlogo3.jpg" alt="Pines Charter logo" />
               </div>
             </div>
             <div className='learn-more-wrapper'>
