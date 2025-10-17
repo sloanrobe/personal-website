@@ -53,3 +53,68 @@
   font-size: 1em;
   line-height: 1.4;
 }
+
+@media (max-width: 1024px) {
+
+    .headline-sub {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    height: auto;
+    padding: 30px 20px 20px 20px;
+    flex-direction: column; 
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+  }
+  
+  .profile-container {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+  }
+  
+  .profile-photo {
+    width: 100px; 
+    height: 120px;
+    flex-shrink: 0;
+  }
+  .profile-photo img {
+    position: static;
+    height: 100%;
+    width: auto;
+  }
+  
+  .headline {
+    flex: 1 1 150px; 
+    font-size: 1em; 
+    margin: 0;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .headline-line {
+      flex-basis: 100%;
+      order: 1;
+      margin: 2px 0;
+      text-align: center;
+      font-size: 0.9em;
+  }
+
+  .headline-sub {
+    flex-basis: 100%; 
+    order: 2;
+    text-align: center; 
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+}

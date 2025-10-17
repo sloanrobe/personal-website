@@ -15,7 +15,6 @@
   object-fit: contain;
   transition: transform 0.2s ease;
   transform-origin: center;
-  /* filter: grayscale(100%); */
 }
 
 .logo-bar img:hover {
@@ -39,7 +38,7 @@
 }
 
 .logo-bar img.flo {
-  transform: scale(0.7) /* translateX(10px) */;
+  transform: scale(0.7);
 }
 
 .logo-bar img.bca {
@@ -61,4 +60,42 @@
 .logo-bar img:not(.bizid) {
   position: relative;
   left: 40px;
+}
+
+/* ==================================== */
+/* MOBILE/TABLET STYLES (Max-width: 1024px) */
+/* ==================================== */
+@media (max-width: 1024px) {
+  .logo-bar {
+    height: auto; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 5px;
+    padding: 15px 5px 0px;
+    border-radius: 10px;
+  }
+
+  /* Reset ALL complex desktop positioning and transforms */
+  .logo-bar img {
+    position: static !important; 
+    left: initial !important;
+    transform: none !important; 
+    
+    max-height: 80px; 
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  /* --- Row 1: First 7 logos (Vanderbilt to Jets) --- */
+  .logo-bar img:nth-child(-n + 7) {
+      max-height: 100px;
+      width: 12%; 
+      margin: 2px;
+  }
+
+  /* --- Row 2: Last 4 logos (FLO to Bizid) --- */
+  .logo-bar img:nth-child(n + 8) {
+      width: 20%; 
+      margin: 5px;
+  }
 }

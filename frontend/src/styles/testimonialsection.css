@@ -143,3 +143,51 @@
     margin-top: 10px;
     height: 50px;
 }
+
+/* MOBILE/TABLET STYLES (Max-width: 768px) */
+/* ==================================== */
+@media (max-width: 768px) {
+
+    .testimonials {
+        margin-top: 50px; 
+    }
+
+    .testimonials h2 {
+        margin-left: 0px;
+    }
+
+    .testimonial-card {
+        height: auto;
+        min-height: 350px;
+        max-width: 95%;
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .testimonial-content {
+        gap: 15px;
+    }
+
+    .testimonial-content p {
+        line-height: 1.5rem; 
+        font-size: 1rem; 
+        flex-grow: initial;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .testimonial-content > img {
+        max-height: 50px; 
+        max-width: 180px;
+        margin-bottom: 0;
+    }
+
+    .headshot-style {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .testimonial-dots {
+        margin-top: 10px;
+    }
+}

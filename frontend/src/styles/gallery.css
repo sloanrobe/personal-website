@@ -7,12 +7,9 @@ h1 {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 12px;
-
   /* target a card width instead of fixed percentages */
-  column-width: 180px; /* adjust 200–260px to taste */
+  column-width: 180px;
   column-gap: 12px;
-
-  /* vendor prefixes */
   -webkit-column-width: 180px;
   -moz-column-width: 180px;
   -webkit-column-gap: 12px;
@@ -24,7 +21,6 @@ h1 {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
-
   margin-bottom: 12px;
   transition: all 350ms ease;
   cursor: pointer;
@@ -34,7 +30,7 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px; /* optional: nicer corners */
+  border-radius: 6px;
   border: 1px solid #1277b0;
 }
 
@@ -42,31 +38,41 @@ h1 {
   filter: opacity(0.85);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .gallery {
-    column-width: 180px;
-    -webkit-column-width: 180px;
-    -moz-column-width: 180px;
+    column-width: 160px;
+    -webkit-column-width: 160px;
+    -moz-column-width: 160px;
+  }
+
+  #gallery-nav-scroll h1 {
+    margin-left: 45px;
+    margin-top: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .gallery {
-    column-width: 140px;
-    -webkit-column-width: 140px;
-    -moz-column-width: 140px;
+    column-width: 80px;
+    -webkit-column-width: 80px;
+    -moz-column-width: 80px;
   }
+
+  #gallery-nav-scroll h1 {
+        margin-left: 0;
+        margin-top: 50px;
+    }
 }
 
 /* ---------- Modal (overlay) ---------- */
 .model {
   position: fixed;
-  inset: 0; /* top/right/bottom/left: 0 */
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000;
-  padding: 0 12px; /* small gutter on mobile */
+  padding: 0 12px;
   transition: opacity 0.4s ease, visibility 0.4s ease;
   visibility: hidden;
   opacity: 0;
@@ -98,28 +104,6 @@ h1 {
   transform: scale(1);
 }
 
-/* Close icon (MUI) */
-/* .model .close-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 2rem;
-  height: 2rem;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #ffffff;
-  background: rgba(0,0,0,0.45);
-  border-radius: 6px;
-  padding: 4px;
-
-  cursor: pointer;
-  z-index: 9999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-} */
-
 .model .close-btn {
   position: absolute;
   top: max(10px, env(safe-area-inset-top));
@@ -129,12 +113,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;              /* MUI icons use currentColor */
+  color: #ffffff;
   background: rgba(0,0,0,0.45);
   border-radius: 6px;
   padding: 4px;
   cursor: pointer;
-  z-index: 2;                  /* above the image inside .model */
+  z-index: 2;
   box-shadow: 0 2px 8px rgba(0,0,0,0.35);
 }
 

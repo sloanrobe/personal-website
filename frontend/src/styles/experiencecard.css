@@ -7,6 +7,7 @@
   margin-left: 45px;
   font-family: 'Lato';
   font-size: 2rem;
+  text-align: left;
 }
 
 .experience-card {
@@ -16,6 +17,7 @@
   border: 2px solid #1277b0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
   overflow: hidden;
+  position: relative;
 }
 
 .experience-section {
@@ -69,20 +71,9 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.sports-technology,
-.sports-medicine,
-.biz-dev {
   transition: transform 250ms ease, box-shadow 250ms ease;
   isolation: isolate;
 }
-
-/* .sports-technology h2,
-.sports-medicine h2,
-.biz-dev h2 {
-  color: #1277b0;
-} */
 
 .card-body {
   display: flex;
@@ -99,7 +90,6 @@
 .sports-technology .card-body,
 .sports-medicine .card-body,
 .biz-dev .card-body {
-  /* filter: grayscale(100%); */
   transition: filter 250ms ease;
   display: flex;
   flex-direction: column;
@@ -120,7 +110,7 @@
 .sports-tech-bullets,
 .biz-dev-bullets {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal-width columns */
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   font-size: 0.8rem;
 }
@@ -186,7 +176,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 5px;
   margin-top: 15px;
 }
 
@@ -311,12 +301,211 @@
   pointer-events: none;
 }
 
-/* responsive: switch to horizontal divider on stacked layout */
+.hide-on-mobile {
+    display: inline;
+}
+
+
+@media (max-width: 1024px) {
+
+    .sports-medicine-bullets,
+    .sports-tech-bullets,
+    .biz-dev-bullets {
+        gap: 0.5rem;
+        margin-left: 10px;
+    }
+    
+    .sports-medicine-bullets ul,
+    .sports-tech-bullets ul,
+    .biz-dev-bullets ul {
+        padding-left: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .hide-on-mobile {
+      display: none;
+    }
+
+    .experience-card p {
+      font-size: 0.8rem;
+    }
+}
+
+/* -------------------------------------- */
+/* TABLET RESPONSIVE STYLES (max-width: 900px) */
+/* -------------------------------------- */
 @media (max-width: 900px) {
-  .vertical-divider {
-    align-self: auto;
-    width: calc(100% - (var(--divider-inset) * 2));
-    height: 1px;
-    margin: 10px auto;
+    /* Changes horizontal layout to vertical stack */
+    
+    .experience-card {
+        flex-direction: column;
+        border: none;
+        box-shadow: none;
+        padding: 0 15px;
+        padding-bottom: 35px;
+    }
+
+    .experience-section {
+        border: 2px solid #1277b0;
+        border-radius: 10px;
+        margin-bottom: 20px; 
+        flex: auto;
+    }
+
+    .vertical-divider {
+        display: none;
+    }
+
+    .experience-title {
+        margin-left: 0px;
+        text-align: left;
+    }
+
+    .sports-medicine-bullets,
+    .sports-tech-bullets,
+    .biz-dev-bullets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .learn-more-wrapper {
+        position: absolute; /* Take the element out of the flow */
+        bottom: 10px;       /* Place it near the bottom edge of the experience-card */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10; /* Ensure it's on top of any overlapping content */
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sports-technology,
+    .sports-medicine,
+    .biz-dev {
+        min-width: unset;
+    }
+}
+
+/* -------------------------------------- */
+/* SMALLER TABLET / LARGE MOBILE RESPONSIVE STYLES (max-width: 600px) */
+/* -------------------------------------- */
+@media (max-width: 600px) {
+    /* Sports Technology Logos: Stack columns, make logos within each column horizontal */
+    .tech-logos {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .tech-column {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .tech-logos img.tech-logo-flo,
+    .tech-logos img.tech-logo-bca,
+    .tech-logos img.tech-logo-bizid {
+        transform: none;
+        height: 40px;
+    }
+    
+    .tech-logos img.tech-logo-bizid {
+        height: 90px;
+        transform: translateY(-27px);
+    }
+
+    .medicine-logos div {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .medicine-logos img {
+        height: 40px;
+    }
+
+    .medicine-logos img.medicine-logo-titans,
+    .medicine-logos img.medicine-logo-richmond,
+    .medicine-logos img.medicine-logo-murray {
+        transform: none;
+    }
+
+    .biz-dev-logos div {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .biz-dev-logos img {
+        height: 40px;
+    }
+
+    .biz-dev-logos img.k12,
+    .biz-dev-logos img.dailyhuman,
+    .biz-dev-logos img.sportective {
+        transform: none;
+        height: 40px;
+    }
+
+    .biz-dev-logos img.sportective {
+        height: 40px;
+    }
+}
+
+/* -------------------------------------- */
+/* MOBILE RESPONSIVE STYLES (max-width: 480px) */
+/* -------------------------------------- */
+@media (max-width: 480px) {
+  
+  .experience-card {
+      padding-top: 20px;
+    }
+  
+    .sports-medicine-bullets,
+    .sports-tech-bullets,
+    .biz-dev-bullets {
+      /* grid-template-columns: 1fr;  */
+      gap: 0.5rem;
+      margin-left: 40px;
+    }
+
+    .sports-tech-bullets {
+      margin-left: 25px;
+    }
+
+    .hide-on-mobile {
+      display: none;
+    }
+
+    .medicine-logos img.medicine-logo-titans {
+      transform: translateX(-6px);
+  }
+
+    .medicine-logos img.medicine-logo-jets {
+      transform: translateY(5px);
+  }
+
+    .medicine-logos img.medicine-logo-vanderbilt {
+      transform: translateY(7px);
+      height: 45px;
+  }
+
+    .medicine-logos img.medicine-logo-richmond {
+      transform: translateY(-10px);
+  }
+
+    .medicine-logos img.medicine-logo-pines {
+      transform: translateY(5px);
+      height: 45px;
+  }
+
+    .biz-dev-logos img.sportective {
+      height: 90px;
+      transform: translateY(-25px);
+  }
+
+    .biz-dev-logos img.k12 {
+      height: 60px;
+      transform: translateY(-12px) translateX(5px);
   }
 }
