@@ -61,12 +61,10 @@ function Gallery() {
     setTempImgSrc('');
   }, []);
 
-  // Close on Escape key press and manage body scroll class
   useEffect(() => {
     const onKeyDown = (e) => e.key === 'Escape' && closeModal();
     document.addEventListener('keydown', onKeyDown);
 
-    // Add or remove the 'modal-open' class to prevent content shifting
     if (model) {
       document.body.classList.add('modal-open');
     } else {
@@ -75,7 +73,6 @@ function Gallery() {
 
     return () => {
       document.removeEventListener('keydown', onKeyDown);
-      // Clean up on component unmount
       document.body.classList.remove('modal-open');
     };
   }, [model, closeModal]);
@@ -84,10 +81,8 @@ function Gallery() {
     <div id='gallery-nav-scroll'>
       <h1>Gallery</h1>
 
-      {/* Modal overlay */}
       <div
         className={model ? 'model open' : 'model'}
-        /* onClick={closeModal} */
         role="dialog"
         aria-modal="true"
       >
@@ -96,7 +91,7 @@ function Gallery() {
             <img
               src={tempimgSrc}
               alt=""
-              onClick={(e) => e.stopPropagation()} /* don’t close when clicking image */
+              onClick={(e) => e.stopPropagation()}
             />
             <CloseIcon
               className="close-btn"
@@ -110,7 +105,6 @@ function Gallery() {
         )}
       </div>
 
-      {/* Masonry gallery */}
       <div className="gallery">
         {data.map((item) => (
           <div
