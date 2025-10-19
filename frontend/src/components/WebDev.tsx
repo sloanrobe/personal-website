@@ -13,7 +13,7 @@ function WebDev() {
       </div>
 
       <div className='webdev-section'>
-        <h2>Did I mention I am a Junior Web Developer?</h2>
+        <h2>I am a Junior Web Developer</h2>
         <hr />
         <p>I'm like the utility player in software engineering—junior role, big hustle, and ready to contribute wherever needed.</p>
         <p>For the past year, I've been diving headfirst into full-stack development—HTML, CSS, JavaScript, React, Node, databases, the works.</p>
