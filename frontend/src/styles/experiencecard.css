@@ -176,7 +176,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   margin-top: 15px;
 }
 
@@ -329,6 +329,35 @@
     .experience-card p {
       font-size: 0.8rem;
     }
+
+    .medicine-logos {
+      gap: 15px;
+    }
+
+    .biz-dev-logos {
+      gap: 15px;
+    }
+
+    .biz-dev-logos img.lockeroom {
+      transform: translateX(5px);
+    }
+
+    .biz-dev-logos img.recruit {
+      transform: translateX(-5px);
+    }
+
+    .biz-dev-logos img.dailyhuman {
+      height: 33px;
+      width: auto;
+      transform: translateY(5px);
+      border-radius: 10px;
+    }
+
+    .biz-dev-logos img.sportective {
+      height: 80px;
+      border-radius: 10px;
+      transform: translateY(-18px);
+    }
 }
 
 /* -------------------------------------- */
@@ -384,6 +413,10 @@
     .sports-medicine,
     .biz-dev {
         min-width: unset;
+    }
+
+    .biz-dev-logos-bottom {
+      gap: 5px;
     }
 }
 
@@ -450,6 +483,10 @@
     .biz-dev-logos img.sportective {
         height: 40px;
     }
+
+    .biz-dev-logos-bottom {
+      gap: 5px;
+    }
 }
 
 /* -------------------------------------- */
@@ -508,4 +545,8 @@
       height: 60px;
       transform: translateY(-12px) translateX(5px);
   }
+
+      .biz-dev-logos-bottom {
+      gap: 5px;
+    }
 }

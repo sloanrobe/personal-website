@@ -94,7 +94,7 @@ function ExperienceCard() {
               </ul>
             </div>
             <div className='biz-dev-logos'>
-              <div>
+              <div className='biz-dev-logos-top' >
                 <img className='lockeroom' src="public/logos/Lockeroom-Chat-logo.jfif" alt="" />
                 <img className='probility' src="public/logos/ProbilityAI-logo.png" alt="" />
                 <img className='recruit' src="public/logos/RecruitMelogo3.webp" alt="" />
