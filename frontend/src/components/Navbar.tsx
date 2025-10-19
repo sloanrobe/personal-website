@@ -33,14 +33,27 @@ function Navbar() {
   return (
     <nav className='navbar' ref={navRef}>
       <img className='signature' src="public/images/Signature2.png" alt="" />
+
+
+      {/* hamburger toggle (no JS) */}
+      <input id="nav-toggle" className="nav-toggle" type="checkbox" aria-hidden="true" />
+      <label htmlFor="nav-toggle" className="burger" aria-label="Toggle menu"><span /></label>
+
+
       <ul className="nav-links">
         <li><a href="#about-nav-scroll">About</a></li>
         <li><a href="#experience-nav-scroll">Experience</a></li>
         <li><a href="#webdev-nav-scroll">Web Development</a></li>
         <li><a href="#testimonials-nav-scroll">Testimonials</a></li>
         <li><a href="#gallery-nav-scroll">Gallery</a></li>
+        <li className="contact-li mobile-only">
+          <ContactButton label="Contact" />
+        </li>
       </ul>
-      <ContactButton label={'Contact'} />
+      <div className="contact-desktop desktop-only">
+        <ContactButton label="Contact" />
+      </div>
+      {/* <ContactButton label={'Contact'} /> */}
     </nav>
   )
 }

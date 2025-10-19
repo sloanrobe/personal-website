@@ -32,7 +32,7 @@
   display: flex;
   gap: 50px;
   list-style: none;
-  margin-left: 230px;
+  margin-left: 270px;
   padding: 0;
   color: white;
 }
@@ -63,4 +63,198 @@
 
 .navbar.navbar--scrolled {
   border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact-desktop {
+  /* Push the element to the far right of the navbar */
+  margin-left: auto; 
+  /* Add some padding to the left for visual spacing from the last nav link */
+  padding-left: 10px; 
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .signature {
+    height: 120px;
+  }
+
+  .nav-links {
+    gap: 25px;
+    list-style: none;
+    margin-left: 165px;
+    padding: 0;
+    color: white;
+  }
+}
+
+
+/* @media (max-width: 480px) {
+
+  .signature {
+    height: 90px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    list-style: none;
+    margin-left: 10px;
+    padding: 0;
+    color: white;
+  }
+
+} */
+
+
+
+
+
+/* hidden checkbox */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* hide burger on desktop */
+.burger { display: none; }
+
+.desktop-only { display: block; }
+
+.mobile-only { display: none; }
+
+@media (max-width: 480px) {
+  .signature { height: 90px; }
+
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+
+  /* Drop-down menu styles */
+  .nav-links {
+    position: absolute;
+    top: 60px; /* Start just below the 60px tall navbar */
+    left: 0;
+    right: 0;
+    height: auto;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: #000 !important;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: calc(var(--nav-h, 60px) + 20px) 24px 40px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 160ms ease, max-height 300ms ease;
+    text-align: center;
+    justify-content: flex-start;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Open state */
+  .nav-toggle:checked ~ .nav-links {
+    opacity: 1;
+    max-height: 500px;
+    pointer-events: auto;
+    background-color: #000;
+  }
+
+  .nav-links a {
+    font-size: 1.125rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .contact-li {
+    margin-top: 0; /* Ensures Contact button stays at the bottom of the visible list */
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* ------------------- BURGER ICON FIXES ------------------- */
+
+  /* Burger on far right */
+  .burger {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px; /* Optional: aligns it to the right edge */
+    z-index: 2100;
+  }
+
+  .burger span {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+  }
+
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 160ms ease, opacity 160ms ease, top 160ms ease;
+  }
+
+  .burger span::before { /* Top bar */
+    top: -7px;
+  }
+
+  .burger span::after { /* Bottom bar */
+    top: 7px;
+  }
+
+  /* Animate burger into X (Checked State) */
+  .nav-toggle:checked + .burger span {
+    background: transparent;
+  }
+  .nav-toggle:checked + .burger span::before {
+    top: 0;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .nav-toggle:checked + .burger span::after {
+    top: 0;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  /* hidden checkbox (Keep this at the end) */
+  .nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
