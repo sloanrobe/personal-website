@@ -80,8 +80,7 @@
     position: static !important; 
     left: initial !important;
     transform: none !important; 
-    
-    max-height: 80px; 
+    max-height: 180px; 
     width: auto;
     flex: 0 0 auto;
   }
@@ -97,5 +96,32 @@
   .logo-bar img:nth-child(n + 8) {
       width: 20%; 
       margin: 5px;
+      margin-left: 20px;
+  }
+
+  .logo-bar img.bizid {
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .logo-bar {
+    gap: 4px;
+  }
+  
+  .logo-bar img {
+    height: 40px;
+  }
+
+ .logo-bar img:nth-child(n + 8) {
+    flex: 0 0 25%;
+    max-width: 20%;
+    margin: 0 4px;               /* remove extra margins that caused overflow */
+    height: 30px;
+  }
+
+  .logo-bar img.bizid {
+    height: 60px;
   }
 }

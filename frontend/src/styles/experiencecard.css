@@ -360,10 +360,96 @@
     }
 }
 
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .experience-section.sports-medicine p {
+      margin-bottom: 30px; /* creates that empty line */
+    }
+
+    .sports-medicine-bullets ul,
+    .sports-tech-bullets ul,
+    .biz-dev-bullets ul {
+        padding-left: 0.2rem;
+        font-size: 0.5rem;
+    }
+
+    .tech-logos img {
+      height: 25px;
+    }
+
+    .tech-logos img.tech-logo-flo {
+      height: 35px;
+    }
+
+    .tech-logos img.tech-logo-bca {
+      height: 30px;
+    }
+
+    .tech-logos img.tech-logo-bizid {
+      height: 85px;
+    }
+
+    .medicine-logos div {
+      gap: 5px;
+    }
+
+    .medicine-logos img {
+      height: 45px;
+    }
+
+    .medicine-logos img.medicine-logo-redskins {
+      height: 50px;
+    }
+
+    .medicine-logos img.medicine-logo-titans {
+      height: 40px;
+    }
+
+    .medicine-logos img.medicine-logo-jets {
+      height: 35px;
+      transform: translateY(5px);
+    }
+
+    .experience-section.biz-dev .biz-dev-logos div {
+    gap: 12px;  /* horizontal spacing within each row */
+  }
+
+    .biz-dev-logos img {
+      height: 35px;
+      margin-top: 9px;
+    }
+
+    .experience-section.biz-dev .biz-dev-logos-bottom img {
+      height: 22px;
+      width: auto;
+    }
+
+    .experience-section.biz-dev .biz-dev-logos-bottom img.sportective {
+      height: 55px;
+      width: auto;
+      transform: translateY(calc(-43px + 30px));
+    }
+
+    .experience-section.biz-dev .biz-dev-logos-bottom img.k12 {
+      height: 45px;
+      width: auto;
+    }
+
+    .learn-more-wrapper button,
+  .learn-more-wrapper .learn-more-button {
+    white-space: nowrap;       /* prevent text wrapping */
+    font-size: 0.85rem;        /* slightly smaller text */
+    padding: 10px 18px;        /* keep proportions */
+  }
+
+}
+
+
 /* -------------------------------------- */
-/* TABLET RESPONSIVE STYLES (max-width: 900px) */
+/* TABLET RESPONSIVE STYLES (max-width: 767px) */
 /* -------------------------------------- */
-@media (max-width: 900px) {
+@media (max-width: 767px) {
     /* Changes horizontal layout to vertical stack */
     
     .experience-card {
@@ -546,7 +632,12 @@
       transform: translateY(-12px) translateX(5px);
   }
 
-      .biz-dev-logos-bottom {
+    .biz-dev-logos-bottom {
       gap: 5px;
+  }
+
+    .biz-dev-logos img.dailyhuman {
+      height: 30px;
+      transform: translateY(5px);
     }
 }
