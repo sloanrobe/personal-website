@@ -17,7 +17,7 @@ function SportsTechnologyExperience() {
 
       <div className='flo-experience'>
         <div className='logo-card'>
-          <img className='tech-flo' src="public/logos/FLOUnleashedlogo3.PNG" alt="" />
+          <img className='tech-flo' src="/logos/FLOUnleashedlogo3.PNG" alt="" />
           <p>Chief of Business Development</p>
           <p>2024-Present</p>
 
@@ -27,9 +27,9 @@ function SportsTechnologyExperience() {
               ref={videoRef}
               className="commercial-video"
               controls={playing}
-              poster="public/images/FLO-poster.png"
+              poster="/images/FLO-poster.png"
             >
-              <source src="public/videos/Commercial-Video.MOV" type="video/mp4" />
+              <source src="/videos/Commercial-Video.MOV" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -44,17 +44,17 @@ function SportsTechnologyExperience() {
 
       <div className='analytics-experience'>
         <div className='logo-card'>
-          <img className='tech-optima' src="public/logos/OptimaSportsAnalyticslogo.png" alt="" />
+          <img className='tech-optima' src="/logos/OptimaSportsAnalyticslogo.png" alt="" />
           <p>Vice President</p>
           <p>2016-2021</p>
         </div>
         <div className='logo-card'>
-          <img className='tech-bca' src="public/logos/BCAlogo.png" alt="" />
+          <img className='tech-bca' src="/logos/BCAlogo.png" alt="" />
           <p className='no-wrap'>Director of Sales & Business Development</p>
           <p>2022-2023</p>
         </div>
         <div className='logo-card'>
-          <img className='tech-bizid' src="public/logos/Bizidlogo5.png" alt="" />
+          <img className='tech-bizid' src="/logos/Bizidlogo5.png" alt="" />
           <p>Head of Sports Division</p>
           <p>2024</p>
         </div>

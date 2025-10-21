@@ -7,7 +7,7 @@ function WebDev() {
     <div id='webdev-nav-scroll' className='webdev-container'>
       <div className='webdev-logos'>
         <img
-          src="public/logos/webdev-logos.png"
+          src="/logos/webdev-logos.png"
           alt="Web Development Logos"
         />
       </div>

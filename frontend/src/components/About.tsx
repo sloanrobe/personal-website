@@ -18,11 +18,11 @@ function About() {
       <div className='about-images-wrapper'>
         <div className='about-images'>
           <img
-            src="public/images/NYJ.jpg"
+            src="/images/NYJ.jpg"
             alt="Benji Sloan with New York Jets Staff"
           />
           <img
-            src="public/images/Speaker_5.jpg"
+            src="/images/Speaker_5.jpg"
             alt="Benji Sloan speaking at a conference"
           />
         </div>

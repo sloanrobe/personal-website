@@ -51,9 +51,9 @@ const ContactForm = () => {
           <h3 className='consultation-subtext'>Let's define the next high-impact move.</h3>
           <div className='headshot-info'>
             <div className='headshot-frame'>
-              <img className='headshot-style-benji' src="public/headshots/Benji-Sloan-headshot.jpg" alt="" />
+              <img className='headshot-style-benji' src="/headshots/Benji-Sloan-headshot.jpg" alt="Benji Sloan headshot" />
             </div>
-            <img className='benji-chat-bubble' src="public/images/Benji-chat-bubble.png" alt="" />
+            <img className='benji-chat-bubble' src="/images/Benji-chat-bubble.png" alt="" />
           </div>
         </div>
 

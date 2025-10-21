@@ -4,7 +4,7 @@ function ProfileSection() {
   return (
     <div className='profile-container'>
       {<div className='profile-photo'>
-        {<img src="public/images/BenjiHeadshotNoBackground.png" alt="" />}
+        {<img src="/images/BenjiHeadshotNoBackground.png" alt="Benji Sloan profile photo" />}
       </div>}
       <div className='headline'>
         <p className='headline-line'>Visionary Leadership.</p>

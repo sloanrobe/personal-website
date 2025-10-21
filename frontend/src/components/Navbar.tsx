@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <nav className='navbar' ref={navRef}>
-      <img className='signature' src="public/images/Signature2.png" alt="" />
+      <img className='signature' src="/images/Signature2.png" alt="" />
 
 
       {/* hamburger toggle (no JS) */}
