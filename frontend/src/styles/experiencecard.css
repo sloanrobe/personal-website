@@ -307,7 +307,6 @@
     display: inline;
 }
 
-
 @media (max-width: 1024px) {
 
     .sports-medicine-bullets,
@@ -366,7 +365,7 @@
 @media (min-width: 768px) and (max-width: 900px) {
 
     .experience-section.sports-medicine p {
-      margin-bottom: 30px; /* creates that empty line */
+      margin-bottom: 30px;
     }
 
     .sports-medicine-bullets ul,
@@ -414,8 +413,8 @@
     }
 
     .experience-section.biz-dev .biz-dev-logos div {
-    gap: 12px;  /* horizontal spacing within each row */
-  }
+      gap: 12px;
+    }
 
     .biz-dev-logos img {
       height: 35px;
@@ -439,21 +438,18 @@
     }
 
     .learn-more-wrapper button,
-  .learn-more-wrapper .learn-more-button {
-    white-space: nowrap;       /* prevent text wrapping */
-    font-size: 0.85rem;        /* slightly smaller text */
-    padding: 10px 18px;        /* keep proportions */
-  }
-
+    .learn-more-wrapper .learn-more-button {
+      white-space: nowrap;
+      font-size: 0.85rem;
+      padding: 10px 18px;
+    }
 }
-
 
 /* -------------------------------------- */
 /* TABLET RESPONSIVE STYLES (max-width: 767px) */
 /* -------------------------------------- */
 @media (max-width: 767px) {
     /* Changes horizontal layout to vertical stack */
-    
     .experience-card {
         flex-direction: column;
         align-items: center;
@@ -482,10 +478,7 @@
     .sports-technology,
     .sports-medicine,
     .biz-dev {
-    /* ... existing styles ... */
-    /* Add explicit alignment to ensure content aligns left/center */
-    align-items: center; /* This centers the H2 and other block elements */
-    /* Change align-items to 'stretch' if you want the card-body to fill the width */
+      align-items: center;
     }
 
     .sports-medicine-bullets,
@@ -500,13 +493,13 @@
     .learn-more-wrapper {
         position: static;  
       /* position: absolute; */ /* Take the element out of the flow */
-        bottom: unset;       /* Place it near the bottom edge of the experience-card */
+        bottom: unset;
         left: unset;  
       /* bottom: 10px;       /* Place it near the bottom edge of the experience-card */
         /* left: 50%; */
         transform: none;
         /* transform: translateX(-50%); */
-        z-index: 10; /* Ensure it's on top of any overlapping content */
+        z-index: 10;
         margin-top: 20px;
         margin-bottom: 10px;
         /* margin-top: 0;
@@ -531,7 +524,6 @@
 /* SMALLER TABLET / LARGE MOBILE RESPONSIVE STYLES (max-width: 600px) */
 /* -------------------------------------- */
 @media (max-width: 600px) {
-    /* Sports Technology Logos: Stack columns, make logos within each column horizontal */
     .tech-logos {
         flex-direction: column;
         gap: 15px;
@@ -608,7 +600,6 @@
     .sports-medicine-bullets,
     .sports-tech-bullets,
     .biz-dev-bullets {
-      /* grid-template-columns: 1fr;  */
       gap: 0.5rem;
       margin-left: 40px;
     }

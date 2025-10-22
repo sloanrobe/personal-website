@@ -170,21 +170,17 @@ form button:hover {
     min-width: 250px;
 }
 
-
 @media (min-width: 801px) and (max-width: 1024px) {
     .contact-body {
-        /* Keep it row, but tighten the gap */
         gap: 20px; 
         padding: 0 10px;
     }
     
     .consultation-text {
-        /* Reduce the max width of the text block to give the form more room */
         max-width: 350px; 
     }
     
     .consultation-heading {
-        /* Ensure the heading wraps appropriately */
         font-size: 2rem;
     }
 
@@ -203,7 +199,6 @@ form button:hover {
     }
 
     form {
-        /* Give the form a slightly larger max-width to look balanced */
         max-width: 500px;
     }
 }

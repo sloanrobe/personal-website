@@ -66,10 +66,6 @@
   margin-right: auto;
 }
 
-/* .about-images-wrapper {
-  structure only
-} */
-
 .about-images {
   display: flex;
   gap: 10px;
@@ -82,39 +78,27 @@
   text-align: center;
 }
 
-
-
-
-
-
-/* --- RESPONSIVE DESIGN FOR SMALLER SCREENS ---
-Targets screens smaller than 1024px (a common breakpoint for tablets) 
-and stacks the content vertically.
-*/
 @media (max-width: 1024px) {
   /* 1. Stack the main container items (text and images) vertically.
   2. Add some gap between the text and image sections.
   3. Reset the margins/padding for a cleaner mobile layout.
   */
   .about-container {
-    flex-direction: column; /* Stacks the children (.about-section and .about-images-wrapper) */
-    margin: 50px auto; /* Centers the container and gives space */
-    padding: 0 10px; /* Adds a bit of padding on the sides */
-    gap: 10px; /* Adds vertical space between the text box and the images */
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 0 10px;
+    gap: 10px;
   }
 
-  /* Make the text box full width (within its padding) on smaller screens */
   .about-section {
     max-width: 100%;
-    /* Remove flex-grow to prevent it from consuming unnecessary space */
     flex: initial;
     padding: 10px;
   }
   
-  /* Ensure images shrink to fit the screen width */
   .about-container img {
     max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
   }
 
   .about-images-wrapper {
@@ -123,20 +107,15 @@ and stacks the content vertically.
     align-items: center;
   }
 
-  /* Ensure the two images stack vertically on small screens if they aren't already. 
-  Your original `.about-images` already uses `flex-direction: column`, so this is mainly a check.
-  */
   .about-images {
-    width: 80%; /* Make the image wrapper use full width */
+    width: 80%;
   }
 
   .divider {
-    /* Reduce vertical margin significantly */
-    margin: 0.8rem 0; /* Reduced to about 12.8px */
+    margin: 0.8rem 0;
   }
 
   .about-section p:nth-last-child(4) { 
-      /* The structure is: 4th-to-last p is the one before the divider */
-      margin-bottom: 10px; /* Reduce its bottom margin */
+      margin-bottom: 10px;
   }
 }

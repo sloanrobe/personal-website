@@ -113,10 +113,9 @@
   }
 
   .contact-desktop {
-    margin-left: auto;       /* don't replace with a fixed number */
-    padding-left: 10px;      /* you can bump this too if you want a tad more */
+    margin-left: auto;
+    padding-left: 10px;
   }
-
 }
 
 @media (max-width: 550px) {
@@ -151,7 +150,6 @@
     backdrop-filter: none !important;
   }
 
-  /* Open state */
   .nav-toggle:checked ~ .nav-links {
     opacity: 1;
     max-height: 500px;
@@ -166,7 +164,7 @@
   }
 
   .contact-li {
-    margin-top: 0; /* Ensures Contact button stays at the bottom of the visible list */
+    margin-top: 0;
     display: flex;
     justify-content: center;
     padding-top: 20px;
@@ -201,7 +199,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px; /* Optional: aligns it to the right edge */
+    right: 20px;
     z-index: 2100;
   }
 
@@ -246,7 +244,7 @@
     transform: translateX(-50%) rotate(-45deg);
   }
 
-  /* hidden checkbox (Keep this at the end) */
+  /* hidden checkbox */
   .nav-toggle {
     position: absolute;
     opacity: 0;
