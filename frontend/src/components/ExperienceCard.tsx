@@ -65,7 +65,7 @@ function ExperienceCard() {
               <div>
                 <img className='medicine-logo-vanderbilt' src="/logos/Vanderbiltlogo2.png" alt="Vanderbilt logo" />
                 <img className='medicine-logo-richmond' src="/logos/RichmondSpiderslogo2.png" alt="Richmond Spiders logo" />
-                <img className='medicine-logo-murray' src="/logos/MurrayStateLogo2.png" alt="Murray State logo" />     
+                <img className='medicine-logo-murray' src="/logos/MurrayStatelogo2.png" alt="Murray State logo" />     
                 <img className='medicine-logo-pines' src="/logos/PinesCharterlogo3.jpg" alt="Pines Charter logo" />
               </div>
             </div>
@@ -96,13 +96,13 @@ function ExperienceCard() {
             <div className='biz-dev-logos'>
               <div className='biz-dev-logos-top' >
                 <img className='lockeroom' src="/logos/Lockeroom-Chat-logo.jfif" alt="Lockeroom Chat logo" />
-                <img className='probility' src="/logos/ProbilityAI-logo.png" alt="Probility AI logo" />
+                <img className='probility' src="/logos/ProbilityAI-logo.PNG" alt="Probility AI logo" />
                 <img className='recruit' src="/logos/RecruitMelogo3.webp" alt="RecruitMe Sports logo" />
               </div>
               <div className='biz-dev-logos-bottom' >
                 <img className='sportective' src="/logos/sportectivelogo2.png" alt="Sportective logo" />
                 <img className='k12' src="/logos/K12SportsTech-logo.jfif" alt="K12 Sports Tech logo" />
-                <img className='dailyhuman' src="/logos/Dailyhuman-logo.png" alt="Dailyhuman logo" />
+                <img className='dailyhuman' src="/logos/Dailyhuman-logo.PNG" alt="Dailyhuman logo" />
               </div>
             </div>
           </div>

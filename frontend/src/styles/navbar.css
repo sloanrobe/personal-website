@@ -119,7 +119,7 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .signature { height: 90px; }
 
   .desktop-only { display: none !important; }

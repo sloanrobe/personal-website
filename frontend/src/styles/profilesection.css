@@ -56,8 +56,33 @@
 
 @media (max-width: 1024px) {
 
+    .headline {
+        /* Remove the large left margin to allow for true centering */
+        margin-left: 0; 
+        
+        /* Center the text elements */
+        text-align: center; 
+        
+        /* The flex items within the headline are already centered (align-items: center)
+           but this ensures the text itself is centered within each line */
+        align-items: center;
+        
+        /* Reduce font size slightly for better fit */
+        font-size: 1.5em; 
+        
+        /* Reduce bottom margin from the desktop size (80px) */
+        margin-bottom: 30px; 
+    }
+    
+    .headline-line {
+        text-align: center; /* Ensure each line centers its text */
+        font-size: 1.5rem;
+    }
+
+    /* This rule already exists but can be kept/modified */
     .headline-sub {
         text-align: center;
+        margin-top: 60px; /* Adjusted from 120px desktop margin */
     }
 }
 
