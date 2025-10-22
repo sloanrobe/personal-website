@@ -1,6 +1,8 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 
+const RENDER_API_BASE_URL = 'https://personal-website-8v3q.onrender.com';
+
 const ContactForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -9,7 +11,7 @@ const ContactForm = () => {
     const payload = Object.fromEntries(formData); // { name, email, message }
 
     try {
-      const res = await fetch('http://localhost:3001/api/contact', {
+      const res = await fetch(`${RENDER_API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
