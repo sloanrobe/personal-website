@@ -196,7 +196,7 @@ function Gallery() {
   const closeModal = useCallback(() => {
     setModel(false);
     setTempImgSrc('');
-    setCaption(''); // Clear the caption on close
+    setCaption('');
   }, []);
 
   useEffect(() => {
@@ -223,7 +223,6 @@ function Gallery() {
         className={model ? 'model open' : 'model'}
         role="dialog"
         aria-modal="true"
-        // Allows clicking outside the image/caption to close the modal
         onClick={closeModal} 
       >
         {model && (
@@ -231,7 +230,7 @@ function Gallery() {
              <figure> {/* Use <figure> for semantic grouping of image and caption */}
                <img
                 src={tempimgSrc}
-                alt={caption} // Keep the alt text for accessibility
+                alt={caption}
                 onClick={(e) => e.stopPropagation()}
               />
               {/* 2. Display the caption using the new state */}
