@@ -66,11 +66,6 @@ const contactHandler = async (req, res) => {
 
 export default contactHandler; */
 
-
-
-
-
-
 import 'dotenv/config'; 
 import { Pool } from 'pg';
 
@@ -79,17 +74,14 @@ const pool = new Pool({
  ssl: {
  rejectUnauthorized: false
  },
-  // 💡 Add Max connections and a connection idle timeout
-  max: 20, // Maximum number of clients in the pool
-  idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Terminate connection attempts after 2 seconds
+  max: 20,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
 });
 
 // 💡 NEW: Add an error listener to the pool for better diagnostic logging
 pool.on('error', (err, client) => {
   console.error('Unexpected error on idle client (Pool-level error)', err);
-  // This usually means the client was disconnected from the database
-  // The pool will attempt to recreate the client on the next request.
 });
 
 const WEB3FORMS_ACCESS_KEY = process.env.WEB3FORMS_KEY; 
@@ -110,26 +102,21 @@ const contactHandler = async (req, res) => {
   return res.status(400).json({ success: false, message: 'Missing required fields: name, email, or message.' });
  }
 
- // 💡 Initialize client variable outside try block for scope
   let client;
 
  try {
-    // 💡 NEW: Acquire a client from the pool (This is generally safer than pool.query)
     client = await pool.connect();
 
-  // STEP 1: CRITICAL ACTION - Save to Database (MUST AWAIT)
   const insertQuery = `
    INSERT INTO contact_submissions (name, email, message)
    VALUES ($1, $2, $3)
    RETURNING id, submission_date;
   `;
-  await client.query(insertQuery, [name, email, message]); // 💡 Use client.query
+  await client.query(insertQuery, [name, email, message]);
 
-    // STEP 2: Send IMMEDIATE Success Response to Frontend
-  // The user gets their confirmation right away.
     res.status(200).json({ success: true, message: 'Submission saved and email process started!' });
 
-    // STEP 3: NON-CRITICAL ACTION - Send Email (FIRE AND FORGET)
+    // Send Email (FIRE AND FORGET)
   const web3formsBody = JSON.stringify({
    name, 
    email, 
@@ -137,7 +124,6 @@ const contactHandler = async (req, res) => {
    access_key: WEB3FORMS_ACCESS_KEY
   });
    
-    // We wrap this in a separate anonymous async function for cleaner error handling
     (async () => {
       try {
          const web3formsRes = await fetch("https://api.web3forms.com/submit", {
@@ -157,11 +143,9 @@ const contactHandler = async (req, res) => {
 
 
  } catch (error) {
-  // If the database failed (Step 1), we still send an error.
   console.error('Server Error during DB submission:', error);
   return res.status(500).json({ success: false, message: 'Submission failed due to a server error. Check the console.' });
  } finally {
-    // 💡 NEW: Always release the client back to the pool
     if (client) {
         client.release();
     }
